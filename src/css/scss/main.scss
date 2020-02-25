@@ -1,3 +1,16 @@
+$brand-primary: #3958aa;
+$brand-contrast: #edb54d;
+
+$brand-success: #28a943;
+$brand-info: #5bc0de;
+$brand-warning: #ffc107;
+$brand-danger: #ab3c3c;
+
+$text-color: #333333;
+$text-muted: #a2a2a2;
+$white: #ffffff;
+$gray-chalice: #d9d9d9;
+
 /* -------------------------------------
     GLOBAL
     A very basic CSS reset
@@ -19,11 +32,8 @@ body {
   width: 100% !important;
   height: 100%;
   line-height: 1.6em;
-  /* 1.6em * 14px = 22.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 22px;*/
 }
 
-/* Let's make sure all tables have defaults */
 table td {
   vertical-align: top;
 }
@@ -32,11 +42,11 @@ table td {
     BODY & CONTAINER
 ------------------------------------- */
 body {
-  background-color: #f6f6f6;
+  background-color: $white;
 }
 
 .body-wrap {
-  background-color: #f6f6f6;
+  background-color: $white;
   width: 100%;
 }
 
@@ -60,7 +70,7 @@ body {
 ------------------------------------- */
 .main {
   background-color: #fff;
-  border: 1px solid #e9e9e9;
+  border: 1px solid $gray-chalice;
   border-radius: 3px;
 }
 
@@ -80,11 +90,11 @@ body {
 .footer {
   width: 100%;
   clear: both;
-  color: #999;
+  color: $text-muted;
   padding: 20px;
 }
 .footer p, .footer a, .footer td {
-  color: #999;
+  color: $text-muted;
   font-size: 12px;
 }
 
@@ -93,7 +103,7 @@ body {
 ------------------------------------- */
 h1, h2, h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #000;
+  color: $text-color;
   margin: 40px 0 0;
   line-height: 1.2em;
   font-weight: 400;
@@ -136,15 +146,15 @@ p li, ul li, ol li {
     LINKS & BUTTONS
 ------------------------------------- */
 a {
-  color: #348eda;
+  color: $brand-info;
   text-decoration: underline;
 }
 
 .btn-primary {
   text-decoration: none;
-  color: #FFF;
-  background-color: #348eda;
-  border: solid #348eda;
+  color: $white;
+  background-color: $brand-primary;
+  border: solid darken($brand-primary, 12%);
   border-width: 10px 20px;
   line-height: 2em;
   /* 2em * 14px = 28px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
@@ -184,32 +194,33 @@ a {
   clear: both;
 }
 
-/* -------------------------------------
-    ALERTS
-    Change the class depending on warning email, good email or bad email
-------------------------------------- */
 .alert {
   font-size: 16px;
-  color: #fff;
   font-weight: 500;
   padding: 20px;
-  text-align: center;
   border-radius: 3px 3px 0 0;
-}
-.alert a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-}
-.alert.alert-warning {
-  background-color: #FF9F00;
-}
-.alert.alert-bad {
-  background-color: #D0021B;
-}
-.alert.alert-good {
-  background-color: #68B90F;
+  color: $white;
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  &.alert-warning {
+    background: $brand-warning;
+  }
+
+  &.alert-danger {
+    background: $brand-danger;
+  }
+
+  &.alert-success {
+    background: $brand-success;
+  }
+
+  &.alert-info {
+    background: $brand-info;
+  }
 }
 
 /* -------------------------------------
@@ -276,6 +287,14 @@ a {
 
   .invoice {
     width: 100% !important;
+  }
+}
+
+.small {
+  font-size: 12px !important;
+
+  a, strong, em {
+    font-size: 12px !important;
   }
 }
 
