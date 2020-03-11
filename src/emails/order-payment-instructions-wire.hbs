@@ -1,0 +1,77 @@
+---
+layout: default.hbs
+subject: Payment Instructions Wire
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            This is a stub
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Please provide your bank with the information outlined below when sending a wire in US dollars. Depending on your financial institution's policies, your funds will usually be credited to your order/account by the next business day.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p><b>Be sure</b> to add your order number and the name on your account to the "Beneficiary" or "Message to
+                Recipient" fields (called OBI1 and OBI2, your financial institution will understand these terms when you are placing the wire).</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>You may sometimes place your bank wire online or via fax, or you can print these instructions and bring them to a branch location.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p><b>Amount due: $\{{ amount_due }}</b></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>
+                <u>Destination bank:</u><br>
+                Bank of America<br>
+                One Bryant Park<br>
+                New York, NY, 10036
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>
+                Phone: (800) 729-9473<br>
+                ABA Routing #: 026009593<br>
+                Swift Code / BIC: BOFAUS3N (if your bank requires it; international only)
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>
+                <u>For credit to:</u><br>
+                GoldSilver, LLC<br>
+                Account #483043558754
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>
+                <u>For benefit of:</u>
+            </p>
+            \{{#if buy_order}}
+                <p>OBI1: Order #\{{ order_id }}</p>
+            \{{else}}
+                <p>OBI1: Account #\{{ storage_account_id }}</p>
+            \{{/if}}
+            \{{#if buy_for_delivery_order}}
+                <p>OBI2: \{{ address_recipient_name }}</p>
+            \{{else}}
+                <p>OBI2: \{{ storage_account_certificate_of_title }}</p>
+            \{{/if}}
+        </td>
+    </tr>
+</table>
