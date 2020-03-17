@@ -1,0 +1,43 @@
+---
+layout: default.hbs
+subject: \{{ code }} is your GoldSilver.com security code
+preheader: Your one-time use code is valid for \{{ minutes }} minutes.
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            This is a stub
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Hi \{{ first_name }},</p>
+            <h1>\{{ code }}</h1>
+            <p>Is the GoldSilver.com security code you requested.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Your one-time use code is valid for \{{ minutes }} minutes.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Requested from:</p>
+            <p>Location: \{{ location (based on ip address) }}*</p>
+            <p>IP address: \{{ IP address }}</p>
+            <p>Time: \{{ time }}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>*Location is based on the sign in’s IP address and is approximate.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p style="color:red"><b>Didn’t request a security code?</b></p>
+            <p><a href="(lock link) ">\{{ Lock your account }}</a></p>
+        </td>
+    </tr>
+</table>
