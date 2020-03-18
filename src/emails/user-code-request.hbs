@@ -24,8 +24,8 @@ preheader: Your one-time use code is valid for \{{ minutes }} minutes.
     <tr>
         <td class="content-block">
             <p>Requested from:</p>
-            <p>Location: \{{ location (based on ip address) }}*</p>
-            <p>IP address: \{{ IP address }}</p>
+            <p>Location: \{{ ip_geolocation }}*</p>
+            <p>IP address: \{{ ip_address }}</p>
             <p>Time: \{{ time }}</p>
         </td>
     </tr>
@@ -37,7 +37,7 @@ preheader: Your one-time use code is valid for \{{ minutes }} minutes.
     <tr>
         <td class="content-block">
             <p style="color:red"><b>Didn’t request a security code?</b></p>
-            <p><a href="(lock link) ">\{{ Lock your account }}</a></p>
+            <p><a href="\{{ lock_your_account }}">Lock Your Account</a></p>
         </td>
     </tr>
 </table>
