@@ -87,8 +87,8 @@
     <tr style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">
         <td class="content-block" style="vertical-align: top; padding: 0 0 20px; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;" valign="top">
             <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">Requested from:</p>
-            <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">Location: {{ location (based on ip address) }}*</p>
-            <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">IP address: {{ IP address }}</p>
+            <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">Location: {{ ip_geolocation }}*</p>
+            <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">IP address: {{ ip_address }}</p>
             <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">Time: {{ time }}</p>
         </td>
     </tr>
@@ -100,7 +100,7 @@
     <tr style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">
         <td class="content-block" style="vertical-align: top; padding: 0 0 20px; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;" valign="top">
             <p style="margin-bottom: 10px; font-weight: normal; color: red; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;"><b style="margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">Didn’t request a security code?</b></p>
-            <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;"><a href="(lock link) " style="color: #5bc0de; text-decoration: underline; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">{{ Lock your account }}</a></p>
+            <p style="margin-bottom: 10px; font-weight: normal; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;"><a href="{{ lock_your_account }}" style="color: #5bc0de; text-decoration: underline; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px;">Lock Your Account</a></p>
         </td>
     </tr>
 </table>
