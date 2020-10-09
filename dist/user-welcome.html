@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Order Confirmation Transfer</title>
+    <title>Welcome to GoldSilver, your sign in information</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -39,6 +39,7 @@
 </style>
 </head>
 <body itemscope="" itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #ffffff;">
+    <span class="pre-header" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"></span>
 <table class="body-wrap" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; background-color: #ffffff; width: 100%;" width="100%" bgcolor="#ffffff">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top"></td>
@@ -68,11 +69,29 @@
 <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            {{#if total_due}}
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">{{ payment_instructions }}</p>
-            {{else}}
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">{{ payment_receipt }}</p>
-            {{/if}}
+            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 40px 0 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Important information about your new sign in.</h1>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Thank you for registering a new user account with GoldSilver. With your new account you can easily set up storage in our vaults around the world, buy precious metals for delivery, or sell to us, all with ease.</p>
+        </td>
+    </tr>
+    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Just a few tips to help you get the most out of your new account:</p>
+            <ol style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
+                <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">Your username to access our apps will be this email address. </li>
+                <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">If you ever forget the password you set, you can reset it any time from our site.</li>
+                <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">Keep your email secure to help safeguard your GoldSilver account as well.</li>
+                <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">Please do not share your login.</li>
+            </ol>
+        </td>
+    </tr>
+    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">If you ever need assistance with your account, please reach out to our customer service team.</p>
+        </td>
+    </tr>
+    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
+            <a href="{{ sign_in_to_new_account }}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">Sign in to your new account</a>
         </td>
     </tr>
 </table>
