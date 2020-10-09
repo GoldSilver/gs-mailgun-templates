@@ -13,13 +13,13 @@ app.use("/dist/img", express.static(__dirname + "/dist/img"));
 // Set the route handler for the preview page.
 app.get('/',function(req,res){
 
-  res.status(200);
+    res.status(200);
 
-  var data = {
-      templates: getTemplates()
-  };
+    var data = {
+        templates: getTemplates()
+    };
 
-  res.render(__dirname + '/preview/index', data);
+    res.render(__dirname + '/preview/index', data);
 
 });
 
@@ -34,16 +34,16 @@ function getTemplates() {
 
     templateFiles.forEach( function (file) {
         if (file.substr(-5) === '.html') {
-          var contents = fs.readFileSync(templateDir + file, 'utf8');
-          
-          if (contents) {
-            $ = cheerio.load(contents);
+            var contents = fs.readFileSync(templateDir + file, 'utf8');
 
-            templates.push({
-              'filename': file,
-              'subject': $("html title").text() || "Subject not available"
-            });
-          }
+            if (contents) {
+                $ = cheerio.load(contents);
+
+                templates.push({
+                    'filename': file,
+                    'subject': $("html title").text() || "Subject not available"
+                });
+            }
         }
     });
 

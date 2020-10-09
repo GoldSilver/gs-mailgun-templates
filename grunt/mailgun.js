@@ -1,4 +1,4 @@
-// Use Mailgun option if you want to email the design to your inbox
+// Use Mailgun option if you want to email the design to your inbox or to something like Litmus
 module.exports = function(grunt) {
   return {
     mailer: {

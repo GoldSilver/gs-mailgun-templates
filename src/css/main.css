@@ -6,51 +6,43 @@
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 img {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   width: 100% !important;
   height: 100%;
-  line-height: 1.6em;
-}
+  line-height: 1.6em; }
 
 table td {
-  vertical-align: top;
-}
+  vertical-align: top; }
 
 /* -------------------------------------
     BODY & CONTAINER
 ------------------------------------- */
 body {
-  background-color: #ffffff;
-}
+  background-color: #ffffff; }
 
 .body-wrap {
   background-color: #ffffff;
-  width: 100%;
-}
+  width: 100%; }
 
 .container {
   display: block !important;
   max-width: 600px !important;
   margin: 0 auto !important;
   /* makes it centered */
-  clear: both !important;
-}
+  clear: both !important; }
 
 .content {
   max-width: 600px;
   margin: 0 auto;
   display: block;
-  padding: 20px;
-}
+  padding: 20px; }
 
 /* -------------------------------------
     HEADER, FOOTER, MAIN
@@ -58,33 +50,27 @@ body {
 .main {
   background-color: #fff;
   border: 1px solid #d9d9d9;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
 .content-wrap {
-  padding: 20px;
-}
+  padding: 20px; }
 
 .content-block {
-  padding: 0 0 20px;
-}
+  padding: 0 0 20px; }
 
 .header {
   width: 100%;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .footer {
   width: 100%;
   clear: both;
   color: #a2a2a2;
-  padding: 20px;
-}
+  padding: 20px; }
 
 .footer p, .footer a, .footer td {
   color: #a2a2a2;
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 /* -------------------------------------
     TYPOGRAPHY
@@ -94,50 +80,42 @@ h1, h2, h3 {
   color: #333333;
   margin: 40px 0 0;
   line-height: 1.2em;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 h1 {
   font-size: 32px;
   font-weight: 500;
   /* 1.2em * 32px = 38.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 38px;*/
-}
+  /*line-height: 38px;*/ }
 
 h2 {
   font-size: 24px;
   /* 1.2em * 24px = 28.8px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 29px;*/
-}
+  /*line-height: 29px;*/ }
 
 h3 {
   font-size: 18px;
   /* 1.2em * 18px = 21.6px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 22px;*/
-}
+  /*line-height: 22px;*/ }
 
 h4 {
   font-size: 14px;
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 p, ul, ol {
   margin-bottom: 10px;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 p li, ul li, ol li {
   margin-left: 5px;
-  list-style-position: inside;
-}
+  list-style-position: inside; }
 
 /* -------------------------------------
     LINKS & BUTTONS
 ------------------------------------- */
 a {
   color: #5bc0de;
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .btn-primary {
   text-decoration: none;
@@ -153,59 +131,46 @@ a {
   cursor: pointer;
   display: inline-block;
   border-radius: 5px;
-  text-transform: capitalize;
-}
+  text-transform: capitalize; }
 
 /* -------------------------------------
     OTHER STYLES THAT MIGHT BE USEFUL
 ------------------------------------- */
 .last {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 .first {
-  margin-top: 0;
-}
+  margin-top: 0; }
 
 .aligncenter {
-  text-align: center;
-}
+  text-align: center; }
 
 .alignright {
-  text-align: right;
-}
+  text-align: right; }
 
 .alignleft {
-  text-align: left;
-}
+  text-align: left; }
 
 .clear {
-  clear: both;
-}
+  clear: both; }
 
 .alert {
   font-size: 16px;
   font-weight: 500;
   padding: 20px;
   border-radius: 3px 3px 0 0;
-  color: #ffffff;
-}
-.alert a {
-  text-decoration: none;
-  font-weight: 500;
-}
-.alert.alert-warning {
-  background: #ffc107;
-}
-.alert.alert-danger {
-  background: #ab3c3c;
-}
-.alert.alert-success {
-  background: #28a943;
-}
-.alert.alert-info {
-  background: #5bc0de;
-}
+  color: #ffffff; }
+  .alert a {
+    text-decoration: none;
+    font-weight: 500; }
+  .alert.alert-warning {
+    background: #ffc107; }
+  .alert.alert-danger {
+    background: #ab3c3c; }
+  .alert.alert-success {
+    background: #28a943; }
+  .alert.alert-info {
+    background: #5bc0de; }
 
 /* -------------------------------------
     INVOICE
@@ -214,76 +179,50 @@ a {
 .invoice {
   margin: 40px auto;
   text-align: left;
-  width: 80%;
-}
+  width: 80%; }
 
 .invoice td {
-  padding: 5px 0;
-}
+  padding: 5px 0; }
 
 .invoice .invoice-items {
-  width: 100%;
-}
+  width: 100%; }
 
 .invoice .invoice-items td {
-  border-top: #eee 1px solid;
-}
+  border-top: #eee 1px solid; }
 
 .invoice .invoice-items .total td {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
 /* -------------------------------------
     RESPONSIVE AND MOBILE FRIENDLY STYLES
 ------------------------------------- */
 @media only screen and (max-width: 640px) {
   body {
-    padding: 0 !important;
-  }
-
+    padding: 0 !important; }
   h1, h2, h3, h4 {
     font-weight: 800 !important;
-    margin: 20px 0 5px !important;
-  }
-
+    margin: 20px 0 5px !important; }
   h1 {
-    font-size: 22px !important;
-  }
-
+    font-size: 22px !important; }
   h2 {
-    font-size: 18px !important;
-  }
-
+    font-size: 18px !important; }
   h3 {
-    font-size: 16px !important;
-  }
-
+    font-size: 16px !important; }
   .container {
     padding: 0 !important;
-    width: 100% !important;
-  }
-
+    width: 100% !important; }
   .content {
-    padding: 0 !important;
-  }
-
+    padding: 0 !important; }
   .content-wrap {
-    padding: 10px !important;
-  }
-
+    padding: 10px !important; }
   .invoice {
-    width: 100% !important;
-  }
-}
+    width: 100% !important; } }
+
 .small {
-  font-size: 12px !important;
-}
-.small a, .small strong, .small em {
-  font-size: 12px !important;
-}
+  font-size: 12px !important; }
+  .small a, .small strong, .small em {
+    font-size: 12px !important; }
 
 /*# sourceMappingURL=styles.css.map */
-
-/*# sourceMappingURL=main.css.map */

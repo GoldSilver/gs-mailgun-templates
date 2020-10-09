@@ -1,11 +1,14 @@
 // Takes your SCSS files and compiles them to CSS
+const sass = require('node-sass');
+
 module.exports = {
-  main: {
+  dist: {
     options: {
       style: 'expanded',
+      implementation: sass
     },
     files: {
-      'src/css/main.css': 'src/css/scss/main.scss'
+      '<%= paths.src %>/css/main.css': '<%= paths.src %>/css/scss/main.scss'
     }
   },
 
@@ -14,9 +17,10 @@ module.exports = {
   preview: {
     options: {
       style: 'compressed',
+      implementation: sass
     },
     files: {
-      'preview/css/preview.css': 'preview/scss/preview.scss'
+      '<%= paths.preview %>/css/preview.css': '<%= paths.preview %>/scss/preview.scss'
     }
   }
 };
