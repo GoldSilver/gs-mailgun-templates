@@ -1,0 +1,58 @@
+---
+layout: default.hbs
+subject: Important Two-factor authentication settings changed
+preheader: Please review requested change to to two-factor authentication settings.
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Please review requested change to to two-factor authentication settings.</h1>
+             \{{#if enabled_for_sign_in}}
+                <p>Two-factor authentication <b>enabled</b> for sign in.</p>
+             \{{else}}
+                <p>Two-factor authentication <b>disabled</b> for sign in.</p>
+             \{{/if}}
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+             <h1>Please review requested change to to two-factor authentication settings.</h1>
+             \{{#if phone_added]}}
+                 <p><b>(***) *** 1234</b> now <b>added</b> as a two-factor authentication method.</p>
+             \{{else}}
+                 <p><b>(***) *** 1234 removed</b> as a two-factor authentication method.</p>
+             \{{/if}}
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p><b>Requested from:</b></p>
+            <p>Location: \{{ location (based on ip address) }}*</p>
+            <p>IP address: \{{ IP address }}</p>
+            <p>Time: \{{ time }}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>*Location is based on the sign in's IP address and is approximate.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p style="color: red"><b>Didn't make this change?</b></p>
+            <p>If this change was intentional, you can safely ignore this email. Otherwise, please click the
+            following link to secure your account:</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p><a href="\{{ did_not_request_change }}">I did NOT request this change</a></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Clicking this link will immediately lock your account and prevent changes to new orders/instructions;
+            <u>you will be required to reset your password</u> to unlock your account.</p>
+        </td>
+    </tr>
+</table>

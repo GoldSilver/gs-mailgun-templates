@@ -1,0 +1,43 @@
+---
+layout: default.hbs
+subject: New device sign in
+preheader: Confirm that you signed in from a new device in \{{ location (from IP address) }}.
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>A new device signed into your account.</h1>
+            <p>We noticed a recent sign in for your account and we want to make sure it was you:</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Requested from:</p>
+            <p>Location: \{{ location (from IP address) }}*</p>
+            <p>IP address: \{{ IP address }}</p>
+            <p>Time: \{{ time }}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>*Location is based on the sign in's IP address and is approximate.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p style="color:red"><b>Didn't request this sign in?</b></p>
+            <p>If this was you, you can safely ignore this email. Otherwise, please click the following link to secure your account:</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p><a href="\{{ sign_in_was_not_me }}">This sign in was NOT me</a></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Clicking this link will immediately lock your account and prevent changes to new orders/instructions;
+                <u>you will be required to reset your password</u> to unlock your account.</p>
+        </td>
+    </tr>
+</table>
