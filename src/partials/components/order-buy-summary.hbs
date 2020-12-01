@@ -1,0 +1,48 @@
+<h2>Buy Order Summary</h2>
+<p>A <a href="#">printable invoice</a> is also available in your GoldSilver.com account.</p>
+<table class="invoice">
+    <tr>
+        <td>
+            <table class="invoice-items" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="//placehold.it/40" alt="\{{name}}"></td>
+                    <td>\{{name}}<br><br>Quantity: \{{quantity}}<br>Unit Price: $\{{unit_price}}</td>
+                    <td class="alignright">
+                        \{{#if discounts}}
+                            <p class="strikethrough">$\{{original_total}}</p>
+                            <ul>
+                                <li>\{{discount_name}}: $\{{discount_total}}</li>
+                            </ul>
+                            <p>Adjusted subtotal: $\{{total}}</p>
+                        \{{else}}
+                            $\{{total}}
+                        \{{/if}}
+                    </td>
+                </tr>
+                <tr class="total">
+                    <td class="alignright" colspan="2" width="80%">Subtotal</td>
+                    <td class="alignright">$\{{order_original_total}}</td>
+                </tr>
+                <tr class="total">
+                    <td class="alignright" colspan="2" width="80%">Shipping</td>
+                    <td class="alignright">
+                        \{{#if shipping_total}}
+                            $\{{shipping_total}}
+                        \{{else}}
+                            FREE
+                        \{{/gt}}
+                    </td>
+                </tr>
+                <tr class="total">
+                    <td class="alignright" colspan="2"><b>Total</b></td>
+                    <td class="alignright">$\{{order_total}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="alignright">
+            <p>All prices in US Dollars (USD)</p>
+        </td>
+    </tr>
+</table>

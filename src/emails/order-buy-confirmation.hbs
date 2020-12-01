@@ -1,0 +1,39 @@
+---
+layout: default.hbs
+subject: Buy Order Confirmation #\{{order_number}}
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Thank You for Your Purchase</h1>
+            <p>Your order #\{{order_number}} has been received and the price is locked.</p>
+        </td>
+    </tr>
+    \{{#if amount_due}}
+    <tr>
+        <td class="content-block">
+            <p><b>There is a balance due on your order; please send payment as soon as possible.</b></p>
+            <p><b class="underlined">Amount Due:</b> $\{{amount_due}}</p>
+            <!-- @todo: snippet -->
+            <p><b>Orders not paid promptly may be cancelled.</b></p>
+        </td>
+    </tr>
+    \{{/if}}
+    \{{#if is_riskified}}
+    <tr>
+        <td class="content-block">
+            <p><b>Please note, every order is subject to a brief security review to help us combat fraud.</b> If there are any issues, we may reach out to you for identity verification.</p>
+        </td>
+    </tr>
+    \{{/if}}
+    <tr>
+        <td class="content-block">
+            <p>Reminder, all cancelled orders with a price lock are subject to potential market-loss charges, per <a href="https://support.goldsilver.com/hc/en-us/articles/215628678-User-Agreement-and-Terms-of-Purchase-and-Sale">the terms</a> agreed to when your order was placed.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-buy-summary}}
+        </td>
+    </tr>
+</table>
