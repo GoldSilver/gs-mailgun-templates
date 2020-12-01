@@ -16,22 +16,22 @@ app.get('/',function(req,res){
     res.status(200);
 
     var data = {
-        templates: getTemplates(),
+        templates: getExampleTemplates(),
     };
 
     res.render(__dirname + '/preview/index', data);
 
 });
 
-app.get('/examples',function(req,res){
+app.get('/raw',function(req,res){
 
     res.status(200);
 
     var data = {
-        templates: getExampleTemplates(),
+        templates: getTemplates(),
     };
 
-    res.render(__dirname + '/preview/example', data);
+    res.render(__dirname + '/preview/raw', data);
 
 });
 

@@ -7,13 +7,13 @@
 </head>
 <body>
   <div id="header" class="header">
-    <div class="header--brand"><a href="https://github.com/leemunroe/grunt-email-workflow" target="_blank">GS Mailgun Templates</a></div>
+    <div class="header--brand">GS Phoenix Emails (Compiled Examples) <small style="font-size: .5em;"><a href="/raw">View raw templates</a></small></div>
     <div class="header--select">
       Preview:&nbsp;
       <select id="template-select">
         <option value="_blank.html">Select a Template</option>
         <% templates.forEach(function(template) { %>
-          <option value="<%= template.filename %>" data-subject="<%= template.subject %>"><%= template.filename.split('.')[0] %></option>
+          <option value="<%= template.filename %>" data-subject="<%= template.subject %>"><%= template.filename.replace('example-', '').split('.')[0] %></option>
         <% }); %>
       </select>
     </div>
@@ -74,7 +74,7 @@
       $('.push-docs-selected').css({display: 'block'});
       $('.template-name').text($s.find('option[value="' + v + '"]').text());
     }
-    
+
     $('iframe').attr('src', v + '?t=' + ms);
     document.location.hash = 'template:' + v;
   });

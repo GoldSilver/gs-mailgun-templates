@@ -12,7 +12,12 @@ module.exports = {
     dest: '<%= paths.dist %>/'
   },
   examples: {
+    expand: true,
     src: ['<%= paths.dist %>/*.html'],
-    dest: '<%= paths.example %>/'
+    dest: '<%= paths.example %>/',
+    rename: function (dest, src) {
+      //@todo: fix hardcode
+      return dest + 'example-' + src.replace('dist/', '');
+    }
   }
 };

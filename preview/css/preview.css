@@ -15,10 +15,10 @@ body {
   font: normal 14px/1.4 Helvetica, Arial, Sans-serif; }
 
 .preview-interface-view a {
-  color: #000;
+  color: #348eda;
   text-decoration: none; }
   .preview-interface-view a:hover {
-    color: #348eda; }
+    text-decoration: underline; }
 
 .preview-interface-view iframe {
   border: none;
