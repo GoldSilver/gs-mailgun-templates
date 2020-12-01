@@ -7,11 +7,11 @@
     font: normal 14px/1.4 Helvetica, Arial, Sans-serif;
   }
   a {
-    color: #000;
+    color: #348eda;
     text-decoration: none;
 
     &:hover {
-      color: #348eda;
+      text-decoration: underline;
     }
   }
   iframe {

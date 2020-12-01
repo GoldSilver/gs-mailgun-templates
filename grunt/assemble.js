@@ -10,5 +10,14 @@ module.exports = {
   pages: {
     src: ['<%= paths.src %>/emails/*.hbs'],
     dest: '<%= paths.dist %>/'
+  },
+  examples: {
+    expand: true,
+    src: ['<%= paths.dist %>/*.html'],
+    dest: '<%= paths.example %>/',
+    rename: function (dest, src) {
+      //@todo: fix hardcode
+      return dest + 'example-' + src.replace('dist/', '');
+    }
   }
 };
