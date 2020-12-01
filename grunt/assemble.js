@@ -10,5 +10,9 @@ module.exports = {
   pages: {
     src: ['<%= paths.src %>/emails/*.hbs'],
     dest: '<%= paths.dist %>/'
+  },
+  examples: {
+    src: ['<%= paths.dist %>/*.html'],
+    dest: '<%= paths.example %>/'
   }
 };
