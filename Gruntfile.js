@@ -11,6 +11,8 @@ module.exports = function(grunt) {
                 src_img:    'src/img',
                 dist:       'dist',
                 dist_img:   'dist/img',
+                example:    'example',
+                example_img:'example/img',
                 preview:    'preview'
             },
 

@@ -4,7 +4,7 @@ module.exports = {
     options: {
       port: 4000,
       hostname: '127.0.0.1',
-      bases: ['<%= paths.dist %>', '<%= paths.preview %>', '<%= paths.src %>'],
+      bases: ['<%= paths.example %>', '<%= paths.dist %>', '<%= paths.preview %>', '<%= paths.src %>'],
       server: './server.js',
       livereload: true
     }

@@ -16,10 +16,22 @@ app.get('/',function(req,res){
     res.status(200);
 
     var data = {
-        templates: getTemplates()
+        templates: getExampleTemplates(),
     };
 
     res.render(__dirname + '/preview/index', data);
+
+});
+
+app.get('/raw',function(req,res){
+
+    res.status(200);
+
+    var data = {
+        templates: getTemplates(),
+    };
+
+    res.render(__dirname + '/preview/raw', data);
 
 });
 
@@ -30,6 +42,30 @@ module.exports = app;
 function getTemplates() {
     var templates = [],
         templateDir = __dirname + '/dist/',
+        templateFiles = fs.readdirSync(templateDir);
+
+    templateFiles.forEach( function (file) {
+        if (file.substr(-5) === '.html') {
+            var contents = fs.readFileSync(templateDir + file, 'utf8');
+
+            if (contents) {
+                $ = cheerio.load(contents);
+
+                templates.push({
+                    'filename': file,
+                    'subject': $("html title").text() || "Subject not available"
+                });
+            }
+        }
+    });
+
+    return templates;
+}
+
+// Helper function to get templates and their "subject" from <title> tag
+function getExampleTemplates() {
+    var templates = [],
+        templateDir = __dirname + '/example/',
         templateFiles = fs.readdirSync(templateDir);
 
     templateFiles.forEach( function (file) {

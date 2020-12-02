@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="preview-interface-view">
 <head>
@@ -7,13 +8,13 @@
 </head>
 <body>
   <div id="header" class="header">
-    <div class="header--brand">GS Phoenix Emails (Compiled Examples) <small style="font-size: .5em;"><a href="/raw">View raw templates</a></small></div>
+    <div class="header--brand">GS Phoenix Emails (Raw Templates) <small style="font-size: .5em;"><a href="/raw">View compiled examples</a></small></div>
     <div class="header--select">
       Preview:&nbsp;
       <select id="template-select">
         <option value="_blank.html">Select a Template</option>
         <% templates.forEach(function(template) { %>
-          <option value="<%= template.filename %>" data-subject="<%= template.subject %>"><%= template.filename.replace('example-', '').split('.')[0] %></option>
+          <option value="<%= template.filename %>" data-subject="<%= template.subject %>"><%= template.filename.split('.')[0] %></option>
         <% }); %>
       </select>
     </div>
