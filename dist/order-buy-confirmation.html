@@ -78,7 +78,7 @@
             {{#if buyOrder.payment.hasAmountDue}}
                 <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">There is a balance due on your order; please send payment as soon as possible.</b></p>
                 <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b class="underlined" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Amount Due:</b> {{buyOrder.invoice.amountDue}}</p>
-                {{> payment-instruction payment=buyOrder.payment}}
+                {{> payment-instructions payment=buyOrder.payment}}
                 <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Orders not paid promptly may be cancelled.</b></p>
             {{/if}}
             {{#if buyOrder.payment.isRiskified}}

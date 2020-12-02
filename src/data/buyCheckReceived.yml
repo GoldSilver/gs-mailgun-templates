@@ -1,0 +1,5 @@
+orderId: '#1234'
+amount: '$12,589.02'
+clearDate: '01/31/2021'
+orderTotal: '($12,589.02)'
+amountDue: 'Paid in full (pending check clearing)'

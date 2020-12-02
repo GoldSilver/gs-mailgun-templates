@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Buy Order Confirmation {{buyOrder.orderId}}</title>
+    <title>Updated Buy Order Confirmation \{{buyOrder.orderId}}</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -60,7 +60,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
-                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"></strong></p>
+                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{ date }}</strong></p>
                                     </td>
                                 </tr>
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -69,83 +69,55 @@
 <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Thank You for Your Purchase</h1>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your order  has been received and the price is locked.</p>
-        </td>
-    </tr>
-    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">There is a balance due on your order; please send payment as soon as possible.</b></p>
-                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b class="underlined" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Amount Due:</b> $12,000.00</p>
-                    <h2 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 40px 0 0; line-height: 1.2em; font-weight: 400; font-size: 18px;">Paying via Check</h2>
-                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">For check orders over $10,000, please reply to this email with a color photograph of your current government-issued ID.</b></p>
-                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">This requirement helps to combat fraud and keep our prices low.  If you have any difficulties please email <a href="mailto:support@goldsilver.com" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">support@goldsilver.com</a>.</p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Send a check for your balance due to the address below:</b></p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Put your Order ID (#1234) on the check and make it out to GoldSilver, LLC.</p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><span class="underline" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Note our check payment address recently changes.</span> If you've saved the address, for example with a billpay service, please ensure it is updated to match.</p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">If sending by postal service (USPS)</b></p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">GS<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">P.O. Box 7410116<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Chicago, IL 60674-0116</p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">For overnight and third-party shippers (UPS, Fedex, DHL, etc.):</b></p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Bank of America Lockbox Services<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">GS LBX 10116<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">540 W. Madison, 4th Floor<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Chicago, IL 60661</p>
-                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Note:</p>
-                    <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
-                        <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">To help combat fraud, all checks are held for 5 business days</b> before orders are released for shipment.</li>
-                        <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">We are unable to accept money orders or cashier's checks in any amount; checks must be drawn on a personal or business account. All checks must be denominated in US Dollars (USD).</li>
-                    </ul>
-                
-                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Orders not paid promptly may be cancelled.</b></p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Reminder, all cancelled orders with a price lock are subject to potential market-loss charges, per <a href="https://support.goldsilver.com/hc/en-us/articles/215628678-User-Agreement-and-Terms-of-Purchase-and-Sale" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">the terms</a> agreed to when your order was placed.</p>
+            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Your Order Has Been Updated</h1>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Changes were made to your order {{buyOrder.Id}}; please see the updated confirmation below.  Your invoice online will also reflect these changes.</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">If you do not understand why these changes were made, please <a href="mailto:support@goldsilver.com" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">contact customer service</a>.</p>
         </td>
     </tr>
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
             <h2 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 40px 0 0; line-height: 1.2em; font-weight: 400; font-size: 18px;">Buy Order Summary</h2>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">A <a href="https://example.com/" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">printable invoice</a> is also available in your GoldSilver.com account.</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">A <a href="{{buyOrder.invoice.printableUrl}}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">printable invoice</a> is also available in your GoldSilver.com account.</p>
             <table class="invoice" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-align: left; width: 100%;" width="100%" align="left">
                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0;" valign="top">
                         <table class="invoice-items" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; width: 100%;" width="100%">
+                            {{#each buyOrder.cartItems as |item|}}
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #eee 1px solid;" valign="top"><img src="//placehold.it/40" alt="Product 1" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; max-width: 100%;"></td>
-                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #eee 1px solid;" valign="top">Product 1<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"><br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Quantity: 100<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Unit Price: $80.55</td>
+                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #eee 1px solid;" valign="top"><img src="{{item.imgUrl}}" alt="{{item.name}}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; max-width: 100%;"></td>
+                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #eee 1px solid;" valign="top">{{item.name}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"><br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Quantity: {{item.quantity}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Unit Price: {{item.unitPrice}}</td>
                                     <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: #eee 1px solid;" valign="top" align="right">
-                                            <p class="strikethrough" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-decoration: line-through; font-size: 14px; margin-bottom: 10px; font-weight: normal;">$5,000.00</p>
+                                        {{#if item.discounts}}
+                                            <p class="strikethrough" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-decoration: line-through; font-size: 14px; margin-bottom: 10px; font-weight: normal;">{{item.originalTotal}}</p>
                                             <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
-                                                    <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">Payment method discount: ($40.00)</li>
+                                                {{#each item.discounts as |discount|}}
+                                                    <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">{{discount.name}}: {{discount.total}}</li>
+                                                {{/each}}
                                             </ul>
-                                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Adjusted subtotal: $4,322,61</p>
+                                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Adjusted subtotal: {{total}}</p>
+                                        {{else}}
+                                            {{item.total}}
+                                        {{/if}}
                                     </td>
                                 </tr>
-                                <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #eee 1px solid;" valign="top"><img src="//placehold.it/40" alt="Product 2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; max-width: 100%;"></td>
-                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #eee 1px solid;" valign="top">Product 2<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"><br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Quantity: 120<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Unit Price: $80.55</td>
-                                    <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: #eee 1px solid;" valign="top" align="right">
-                                            <p class="strikethrough" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-decoration: line-through; font-size: 14px; margin-bottom: 10px; font-weight: normal;">$5,000.00</p>
-                                            <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
-                                                    <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">Payment method discount: ($40.00)</li>
-                                            </ul>
-                                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Adjusted subtotal: $4,322,61</p>
-                                    </td>
-                                </tr>
+                            {{/each}}
                             <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Subtotal</td>
-                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">$10,234.89</td>
+                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{buyOrder.invoice.subtotalForMetals}}</td>
                             </tr>
                             <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Shipping</td>
-                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">FREE</td>
+                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{buyOrder.invoice.shipping}}</td>
                             </tr>
+                            {{#each buyOrder.invoice.additionalLineItems as |lineItem|}}
                                 <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-                                    <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Promotions</td>
-                                    <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">($50.00)</td>
+                                    <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{lineItem.name}}</td>
+                                    <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{lineItem.total}}</td>
                                 </tr>
-                                <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-                                    <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Tax</td>
-                                    <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">$83.24</td>
-                                </tr>
+                            {{/each}}
                             <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <td class="alignright" colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Total</b></td>
-                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">$12,000.00</td>
+                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{buyOrder.invoice.total}}</td>
                             </tr>
                         </table>
                     </td>
@@ -156,6 +128,19 @@
                     </td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+        <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
+            {{#if buyOrder.payment.hasAmountDue}}
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">There is a balance due on your order; please send payment as soon as possible.</b></p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b class="underlined" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Amount Due:</b> {{buyOrder.invoice.amountDue}}</p>
+                {{> payment-instructions payment=buyOrder.payment}}
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Orders not paid promptly may be cancelled.</b></p>
+            {{/if}}
+            {{#if buyOrder.payment.isRiskified}}
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Please note, every order is subject to a brief security review to help us combat fraud.</b> If there are any issues, we may reach out to you for identity verification.</p>
+            {{/if}}
         </td>
     </tr>
 </table>
