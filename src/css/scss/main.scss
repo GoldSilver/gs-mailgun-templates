@@ -108,6 +108,7 @@ h1, h2, h3 {
 }
 
 h1 {
+  margin: 0;
   font-size: 24px;
   font-weight: 500;
   /* 1.2em * 32px = 38.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
@@ -249,6 +250,10 @@ a {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   font-weight: 700;
+}
+
+.strikethrough {
+  text-decoration: line-through;
 }
 
 /* -------------------------------------

@@ -1,41 +1,45 @@
 <h2>Buy Order Summary</h2>
-<p>A <a href="#">printable invoice</a> is also available in your GoldSilver.com account.</p>
+<p>A <a href="\{{buyOrder.invoice.printableUrl}}">printable invoice</a> is also available in your GoldSilver.com account.</p>
 <table class="invoice">
     <tr>
         <td>
             <table class="invoice-items" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td><img src="//placehold.it/40" alt="\{{name}}"></td>
-                    <td>\{{name}}<br><br>Quantity: \{{quantity}}<br>Unit Price: $\{{unit_price}}</td>
-                    <td class="alignright">
-                        \{{#if discounts}}
-                            <p class="strikethrough">$\{{original_total}}</p>
-                            <ul>
-                                <li>\{{discount_name}}: $\{{discount_total}}</li>
-                            </ul>
-                            <p>Adjusted subtotal: $\{{total}}</p>
-                        \{{else}}
-                            $\{{total}}
-                        \{{/if}}
-                    </td>
-                </tr>
+                \{{#each buyOrder.cartItems as |item|}}
+                    <tr>
+                        <td><img src="\{{item.imgUrl}}" alt="\{{item.name}}"></td>
+                        <td>\{{item.name}}<br><br>Quantity: \{{item.quantity}}<br>Unit Price: \{{item.unitPrice}}</td>
+                        <td class="alignright">
+                            \{{#if item.discounts}}
+                                <p class="strikethrough">\{{item.originalTotal}}</p>
+                                <ul>
+                                    \{{#each item.discounts as |discount|}}
+                                        <li>\{{discount.name}}: \{{discount.total}}</li>
+                                    \{{/each}}
+                                </ul>
+                                <p>Adjusted subtotal: \{{total}}</p>
+                            \{{else}}
+                                \{{item.total}}
+                            \{{/if}}
+                        </td>
+                    </tr>
+                \{{/each}}
                 <tr class="total">
                     <td class="alignright" colspan="2" width="80%">Subtotal</td>
-                    <td class="alignright">$\{{order_original_total}}</td>
+                    <td class="alignright">\{{buyOrder.invoice.subtotalForMetals}}</td>
                 </tr>
                 <tr class="total">
                     <td class="alignright" colspan="2" width="80%">Shipping</td>
-                    <td class="alignright">
-                        \{{#if shipping_total}}
-                            $\{{shipping_total}}
-                        \{{else}}
-                            FREE
-                        \{{/if}}
-                    </td>
+                    <td class="alignright">\{{buyOrder.invoice.shipping}}</td>
                 </tr>
+                \{{#each buyOrder.invoice.additionalLineItems as |lineItem|}}
+                    <tr class="total">
+                        <td class="alignright" colspan="2" width="80%">\{{lineItem.name}}</td>
+                        <td class="alignright">\{{lineItem.total}}</td>
+                    </tr>
+                \{{/each}}
                 <tr class="total">
                     <td class="alignright" colspan="2"><b>Total</b></td>
-                    <td class="alignright">$\{{order_total}}</td>
+                    <td class="alignright">\{{buyOrder.invoice.total}}</td>
                 </tr>
             </table>
         </td>
