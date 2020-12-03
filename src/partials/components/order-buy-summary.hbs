@@ -24,16 +24,16 @@
                     </tr>
                 \{{/each}}
                 <tr class="total">
-                    <td class="alignright" colspan="2" width="80%">Subtotal</td>
+                    <td class="alignright" colspan="2" width="70%">Subtotal</td>
                     <td class="alignright">\{{buyOrder.invoice.subtotalForMetals}}</td>
                 </tr>
                 <tr class="total">
-                    <td class="alignright" colspan="2" width="80%">Shipping</td>
+                    <td class="alignright" colspan="2">Shipping</td>
                     <td class="alignright">\{{buyOrder.invoice.shipping}}</td>
                 </tr>
                 \{{#each buyOrder.invoice.additionalLineItems as |lineItem|}}
                     <tr class="total">
-                        <td class="alignright" colspan="2" width="80%">\{{lineItem.name}}</td>
+                        <td class="alignright" colspan="2">\{{lineItem.name}}</td>
                         <td class="alignright">\{{lineItem.total}}</td>
                     </tr>
                 \{{/each}}

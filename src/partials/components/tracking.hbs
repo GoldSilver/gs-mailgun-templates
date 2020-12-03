@@ -1,0 +1,12 @@
+<p>Please reference the tracking information below for detailed status on when to expect your packages.</p>
+<p>Reminder: most of our shipments are sent with an adult signature required for maximum security. Please plan to be available to receive your package(s) and have ID to show the carrier.</p>
+{{#each packages as |package|}}
+    <p><b>{{package.carrier}} {{package.trackingNumber}}</b></p>
+    <ul>
+        {{#each package.products as |product|}}
+            <li>{{product.name}}, Quantity: {{product.quantity}}</li>
+        {{/each}}
+    </ul>
+{{/each}}
+<p>This notice is sent automatically when we’re informed by the vaults used to fulfill your order that tracking information is now available (which can occur shortly before or after it is provided to the carrier).</p>
+<p>If there are any issues with your shipment, please <a href="mailto:{{default.supportEmail}}">contact customer service immediately</a>.</p>

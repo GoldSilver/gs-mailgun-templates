@@ -138,6 +138,15 @@ a {
   border-radius: 5px;
   text-transform: capitalize; }
 
+.text-danger {
+  color: red; }
+
+.underline {
+  text-decoration: underline; }
+
+.date {
+  margin: 0 0 10px; }
+
 /* -------------------------------------
     OTHER STYLES THAT MIGHT BE USEFUL
 ------------------------------------- */
@@ -212,7 +221,8 @@ a {
     font-weight: 800 !important;
     margin: 20px 0 5px !important; }
   h1 {
-    font-size: 22px !important; }
+    font-size: 22px !important;
+    margin: 0 0 5px !important; }
   h2 {
     font-size: 18px !important; }
   h3 {

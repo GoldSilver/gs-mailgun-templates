@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Order Cancelled</title>
+    <title>Awaiting Payment for Order {{buyPaymentReminder.orderId}}</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -15,6 +15,7 @@
   }
   h1 {
     font-size: 22px !important;
+    margin: 0 0 5px !important;
   }
   h2 {
     font-size: 18px !important;
@@ -39,6 +40,7 @@
 </style>
 </head>
 <body itemscope="" itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #ffffff;">
+    <span class="pre-header" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"></span>
 <table class="body-wrap" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; background-color: #ffffff; width: 100%;" width="100%" bgcolor="#ffffff">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top"></td>
@@ -59,7 +61,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
-                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"></strong></p>
+                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{buyPaymentReminder.date}}</strong></p>
                                     </td>
                                 </tr>
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -68,6 +70,20 @@
 <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
+            {{#if buyPaymentReminder.isFinalNotice}}
+                <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;"><span class="text-danger" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: red;">Final Notice:</span> Payment Due for Order {{buyPaymentReminder.orderId}}</h1>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Balance Due: <span class="text-danger" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: red;">{{buyPaymentReminder.amountDue}}</span></b></p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Please send payment today, and <a href="mailto:support@goldsilver.com" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">contact customer service here</a> or by reply to this message to let us know that payment has been posted.</p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Otherwise, your order will be cancelled and you will be charged any applicable market loss fees</b>, per <a href="https://support.goldsilver.com/hc/en-us/articles/215628678-User-Agreement-and-Terms-of-Purchase-and-Sale" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">the terms you agreed to</a> when placing your order.</p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">If you have already sent your payment, and this message is in error, please let us know right away.</p>
+            {{else}}
+                <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Reminder: Payment Due for Order {{buyPaymentReminder.orderId}}</h1>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">This is an automated reminder that there is a balance due on your order {{buyPaymentReminder.orderId}}.</p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Balance Due: <span class="text-danger" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: red;">{{buyPaymentReminder.amountDue}}</span></b></p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Please send payment promptly. Reminder: price locked orders that are cancelled or not paid promptly may result in market-loss charges.</p>
+            {{/if}}
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">You chose to pay your order by {{buyPaymentReminder.payment.method.name}}. Follow these instructions to settle your balance due.</p>
+            {{> payment-instructions payment=buyPaymentReminder.payment}}
         </td>
     </tr>
 </table>

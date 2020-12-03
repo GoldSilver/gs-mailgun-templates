@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Awaiting Payment Notice</title>
+    <title>Your Order {{buyCancelled.orderId}} Has Been Cancelled</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -15,6 +15,7 @@
   }
   h1 {
     font-size: 22px !important;
+    margin: 0 0 5px !important;
   }
   h2 {
     font-size: 18px !important;
@@ -39,6 +40,7 @@
 </style>
 </head>
 <body itemscope="" itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #ffffff;">
+    <span class="pre-header" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"></span>
 <table class="body-wrap" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; background-color: #ffffff; width: 100%;" width="100%" bgcolor="#ffffff">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top"></td>
@@ -59,7 +61,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
-                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{ date }}</strong></p>
+                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{buyCancelled.date}}</strong></p>
                                     </td>
                                 </tr>
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -68,13 +70,18 @@
 <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">
-                Will be sent to the customer after a certain amount of days awaiting payment for an order. The interval needs to be defined on a per payment method basis (check or wire).  The first and second notices will be sent automatically while we awaiting payment on the defined interval, and the final notice will be sent manually by an admin.  We could add conditional logic to change language/intensity in the template based on how many notices have been sent already.  Payment instructions will be included.
-            </p>
-            {{#if final_notice }}
-                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">THIS IS YOUR FINAL NOTICE</p>
-            {{/if }}
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">{{ payment_instructions }}</p>
+            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #333333; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Your Recent Order Has Been Cancelled{{#if buyCancelled.hasMarketLossCharge}}; Market-Loss Fees Were Charged{{/if}}</h1>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your recent order with GoldSilver.com has been cancelled.</p>
+            {{#if buyCancelled.hasMarketLossCharge}}
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">As a reminder, according to <a href="https://support.goldsilver.com/hc/en-us/articles/215628678-User-Agreement-and-Terms-of-Purchase-and-Sale" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">the terms you agreed to at checkout</a>, when order prices are locked market-loss fees apply to orders cancelled by the customer or not paid promptly.</p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your security deposit method has been charged in accordance with this policy:</p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Deposit method: {{buyCancelled.deposit.label}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Total market loss charge: {{buyCancelled.deposit.chargedAmount}}</p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Market loss terms agreed to on: {{buyCancelled.orderDateTime}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">At IP address: {{buyCancelled.ipAddress}}</p>
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">These market-loss fees help keep prices low for all customers by covering the losses incurred by our company from locking prices in the marketplace and the administrative costs of collecting on orders whose obligations were not fulfilled.</p>
+            {{else}}
+                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">We have waived any market-loss fees related to this order. Any security holds placed for this order will be automatically released (if you used a card, please allow up to 7 days for the release to be reflected at your bank).</p>
+            {{/if}}
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Detailed transaction records are available in <a href="{{buyCancelled.gsUrl}}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #5bc0de; text-decoration: underline; font-size: 14px;">your account</a>.</p>
         </td>
     </tr>
 </table>

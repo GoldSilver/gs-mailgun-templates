@@ -1,10 +1,13 @@
 date: 'December 3, 2020'
 orderId: '#1234'
+isFinalNotice: true
+amountDue: '$13,238.88'
 payment:
   isRiskified: false # true if method equals 'card' or 'paypal'
   method:
-    isCheck: true
-    isWire: false
+    name: 'Wire' # 'Check', 'Wire', 'PayPal', 'BitPay', 'Account Balance', 'Card'
+    isCheck: false
+    isWire: true
     isPayPal: false
     isCrypto: false
     isAccount: false
@@ -21,33 +24,3 @@ payment:
     bitPayUrl: 'https://bitpay.com/invoice/1234'
   payPalInstructions:
     gsUrl: 'https://phoenix-q2.bullioninternational.com' # url for order detail page (shows payment instructions
-invoice:
-  subtotalForMetals: '$10,234.89'
-  shipping: 'FREE' # if '$0.00' then replace with 'FREE'
-  total: '$12,000.00'
-  amountDue: '$12,000.00'
-  printableUrl: 'https://example.com/'
-  additionalLineItems: # provide if promotions or tax, tax last
-    - name: 'Promotions'
-      total: '($50.00)'
-    - name: 'Tax'
-      total: '$83.24'
-cartItems:
-  - name: 'Product 1'
-    imgUrl: '//placehold.it/40'
-    quantity: '100'
-    unitPrice: '$80.55'
-    originalTotal: '$5,000.00'
-    total: '$4,322,61'
-    discounts:
-      - name: 'Payment method discount'
-        total: '($40.00)'
-  - name: 'Product 2'
-    imgUrl: '//placehold.it/40'
-    quantity: '120'
-    unitPrice: '$80.55'
-    originalTotal: '$5,000.00'
-    total: '$4,322,61'
-    discounts:
-      - name: 'Payment method discount'
-        total: '($40.00)'

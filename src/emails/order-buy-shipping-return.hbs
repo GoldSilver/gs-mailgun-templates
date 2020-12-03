@@ -1,0 +1,17 @@
+---
+layout: default.hbs
+subject: 'Your Order {{buyShippingReturn.orderId}} Could Not Be Delivered'
+preheader: 'Your Shipment Has Been Returned to Our Facility'
+date: '{{buyShippingReturn.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Shipment Has Been Returned to Our Facility</h1>
+            <p>After multiple attempts, carriers were unable to deliver the following shipment to the address provided and it has been safely returned to the vault.</p>
+            <p>Order \{{buyShippingReturn.orderId}}<br>\{{buyShippingReturn.carrier}}: \{{buyShippingReturn.trackingNumber}}</p>
+            <p>A member of our team will be reaching out to arrange re-shipment of your parcel. Please don’t hesitate to <a href="{{default.supportEmail}}">contact customer service here</a> or reply to this message to help expedite that process.</p>
+            <p>Note, if we are unable to get in contact with you in a reasonable period, your order will either be sent to storage or liquidated (market loss fees may apply) at our discretion. So please reply as soon as you can to let us know you still want to take delivery.</p>
+        </td>
+    </tr>
+</table>

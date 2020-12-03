@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Updated Buy Order Confirmation \{{buyOrder.orderId}}</title>
+    <title>Updated Buy Order Confirmation {{buyOrder.orderId}}</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -15,6 +15,7 @@
   }
   h1 {
     font-size: 22px !important;
+    margin: 0 0 5px !important;
   }
   h2 {
     font-size: 18px !important;
@@ -60,7 +61,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
-                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{ date }}</strong></p>
+                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{buyOrder.date}}</strong></p>
                                     </td>
                                 </tr>
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -102,16 +103,16 @@
                                 </tr>
                             {{/each}}
                             <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-                                <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Subtotal</td>
+                                <td class="alignright" colspan="2" width="70%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Subtotal</td>
                                 <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{buyOrder.invoice.subtotalForMetals}}</td>
                             </tr>
                             <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-                                <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Shipping</td>
+                                <td class="alignright" colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">Shipping</td>
                                 <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{buyOrder.invoice.shipping}}</td>
                             </tr>
                             {{#each buyOrder.invoice.additionalLineItems as |lineItem|}}
                                 <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-                                    <td class="alignright" colspan="2" width="80%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{lineItem.name}}</td>
+                                    <td class="alignright" colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{lineItem.name}}</td>
                                     <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #333; border-bottom: 2px solid #333; font-weight: 700;" valign="top" align="right">{{lineItem.total}}</td>
                                 </tr>
                             {{/each}}
