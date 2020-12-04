@@ -1,0 +1,23 @@
+date: 'December 3, 2020'
+orderId: '#1234'
+isLiquidation: false
+invoice:
+  printableUrl: 'https://phoenix-q2.bullioninternational.info'
+  subtotalForMetals: '$2,422.68'
+  total: '$2,397.68'
+  additionalLineItems:
+    - name: 'Wire Distribution Fee'
+      total: '($25.00)'
+cartItems:
+  - name: 'Salt Lake City (Allocated)'
+    items:
+      - name: 'Product 1'
+        imgUrl: '//placehold.it/40'
+        quantity: '100'
+        unitPrice: '$80.55'
+        total: '$4,322,61'
+      - name: 'Product 2'
+        imgUrl: '//placehold.it/40'
+        quantity: '120'
+        unitPrice: '$80.55'
+        total: '$4,322,61'
