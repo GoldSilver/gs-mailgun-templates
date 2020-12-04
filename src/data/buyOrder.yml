@@ -17,10 +17,10 @@ payment:
     obi1: 'Order #1234' # 'Order #x' where x is order id if buy order, otherwise 'Storage #x' where x is storage account id
     obi2: 'Zachary Lincoln' # if buy for delivery use shipping address name, otherwise storage account cert of title
   cryptoInstructions: #properties can be blank if isCrypto false
-    gsUrl: 'https://phoenix-q2.bullioninternational.com' # url for order detail page (shows payment instructions
+    gsUrl: 'https://phoenix-q2.bullioninternational.info' # url for order detail page (shows payment instructions
     bitPayUrl: 'https://bitpay.com/invoice/1234'
   payPalInstructions:
-    gsUrl: 'https://phoenix-q2.bullioninternational.com' # url for order detail page (shows payment instructions
+    gsUrl: 'https://phoenix-q2.bullioninternational.info' # url for order detail page (shows payment instructions
 invoice:
   subtotalForMetals: '$10,234.89'
   shipping: 'FREE' # if '$0.00' then replace with 'FREE'
