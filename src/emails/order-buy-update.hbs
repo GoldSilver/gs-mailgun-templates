@@ -1,0 +1,33 @@
+---
+layout: default.hbs
+subject: 'Updated Buy Order Confirmation {{buyOrder.orderId}}'
+preheader: 'Your Order Has Been Updated'
+date: '{{buyOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Order Has Been Updated</h1>
+            <p>Changes were made to your order \{{buyOrder.Id}}; please see the updated confirmation below.  Your invoice online will also reflect these changes.</p>
+            <p>If you do not understand why these changes were made, please <a href="mailto:{{default.supportEmail}}">contact customer service</a>.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-buy-summary}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            \{{#if buyOrder.payment.hasAmountDue}}
+                <p><b>There is a balance due on your order; please send payment as soon as possible.</b></p>
+                <p><b class="underlined">Amount Due:</b> \{{buyOrder.invoice.amountDue}}</p>
+                \{{> payment-instructions payment=buyOrder.payment}}
+                <p><b>Orders not paid promptly may be cancelled.</b></p>
+            \{{/if}}
+            \{{#if buyOrder.payment.isRiskified}}
+                <p><b>Please note, every order is subject to a brief security review to help us combat fraud.</b> If there are any issues, we may reach out to you for identity verification.</p>
+            \{{/if}}
+        </td>
+    </tr>
+</table>

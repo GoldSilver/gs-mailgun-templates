@@ -1,0 +1,7 @@
+date: 'December 3, 2020'
+orderId: '#1234'
+orderTotal: '($12,589.02)'
+amountDue: '$25.00'
+payment:
+  method: 'Wire' # 'Check' or 'Wire'
+  amount: '$12,564.02'

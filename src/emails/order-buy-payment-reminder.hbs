@@ -1,0 +1,26 @@
+---
+layout: default.hbs
+subject: 'Awaiting Payment for Order {{buyPaymentReminder.orderId}}'
+preheader: 'Order Paid in Full'
+date: '{{buyPaymentReminder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            \{{#if buyPaymentReminder.isFinalNotice}}
+                <h1><span class="text-danger">Final Notice:</span> Payment Due for Order \{{buyPaymentReminder.orderId}}</h1>
+                <p><b>Balance Due: <span class="text-danger">\{{buyPaymentReminder.amountDue}}</span></b></p>
+                <p>Please send payment today, and <a href="mailto:{{default.supportEmail}}">contact customer service here</a> or by reply to this message to let us know that payment has been posted.</p>
+                <p><b>Otherwise, your order will be cancelled and you will be charged any applicable market loss fees</b>, per <a href="{{default.termsUrl}}">the terms you agreed to</a> when placing your order.</p>
+                <p>If you have already sent your payment, and this message is in error, please let us know right away.</p>
+            \{{else}}
+                <h1>Reminder: Payment Due for Order \{{buyPaymentReminder.orderId}}</h1>
+                <p>This is an automated reminder that there is a balance due on your order \{{buyPaymentReminder.orderId}}.</p>
+                <p><b>Balance Due: <span class="text-danger">\{{buyPaymentReminder.amountDue}}</span></b></p>
+                <p>Please send payment promptly. Reminder: price locked orders that are cancelled or not paid promptly may result in market-loss charges.</p>
+            \{{/if}}
+            <p>You chose to pay your order by \{{buyPaymentReminder.payment.method.name}}. Follow these instructions to settle your balance due.</p>
+            \{{> payment-instructions payment=buyPaymentReminder.payment}}
+        </td>
+    </tr>
+</table>

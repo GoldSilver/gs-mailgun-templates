@@ -1,0 +1,43 @@
+<h2>Sell Order Summary</h2>
+<p>A <a href="\{{sellOrder.invoice.printableUrl}}">printable invoice</a> is also available in your GoldSilver.com account.</p>
+<table class="invoice">
+    <tr>
+        <td>
+            <table class="invoice-items" cellpadding="0" cellspacing="0">
+                \{{#each sellOrder.cartItems as |source|}}
+                    <tr>
+                        <td colspan="3" class="source"><b>Source: \{{source.name}}</b></td>
+                    </tr>
+                    \{{#each source.items as |item|}}
+                        <tr>
+                            <td><img src="\{{item.imgUrl}}" alt="\{{item.name}}"></td>
+                            <td>\{{item.name}}<br><br>Quantity: \{{item.quantity}}<br>Unit Price: \{{item.unitPrice}}</td>
+                            <td class="alignright">
+                                \{{item.total}}
+                            </td>
+                        </tr>
+                    \{{/each}}
+                \{{/each}}
+                <tr class="total">
+                    <td class="alignright" colspan="2" width="70%">Subtotal</td>
+                    <td class="alignright">\{{sellOrder.invoice.subtotalForMetals}}</td>
+                </tr>
+                \{{#each sellOrder.invoice.additionalLineItems as |lineItem|}}
+                    <tr class="total">
+                        <td class="alignright" colspan="2">\{{lineItem.name}}</td>
+                        <td class="alignright">\{{lineItem.total}}</td>
+                    </tr>
+                \{{/each}}
+                <tr class="total">
+                    <td class="alignright" colspan="2"><b>Total Sell Order Proceeds</b></td>
+                    <td class="alignright">\{{sellOrder.invoice.total}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="alignright">
+            <p>All prices in US Dollars (USD)</p>
+        </td>
+    </tr>
+</table>

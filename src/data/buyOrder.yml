@@ -1,0 +1,53 @@
+date: 'December 3, 2020'
+orderId: '#1234'
+payment:
+  isRiskified: false # true if method equals 'card' or 'paypal'
+  method:
+    isCheck: true
+    isWire: false
+    isPayPal: false
+    isCrypto: false
+    isAccount: false
+    isCard: false
+  hasAmountDue: true # true if invoice.amountDue > 0 and not already processing a payment
+  checkInstructions: #properties can be blank if isCheck false
+    requiresIdentityVerification: true
+    memo: '#1234' # order id
+  wireInstructions: #properties can be blank if isWire false
+    obi1: 'Order #1234' # 'Order #x' where x is order id if buy order, otherwise 'Storage #x' where x is storage account id
+    obi2: 'Zachary Lincoln' # if buy for delivery use shipping address name, otherwise storage account cert of title
+  cryptoInstructions: #properties can be blank if isCrypto false
+    gsUrl: 'https://phoenix-q2.bullioninternational.info' # url for order detail page (shows payment instructions
+    bitPayUrl: 'https://bitpay.com/invoice/1234'
+  payPalInstructions:
+    gsUrl: 'https://phoenix-q2.bullioninternational.info' # url for order detail page (shows payment instructions
+invoice:
+  subtotalForMetals: '$10,234.89'
+  shipping: 'FREE' # if '$0.00' then replace with 'FREE'
+  total: '$12,000.00'
+  amountDue: '$12,000.00'
+  printableUrl: 'https://example.com/'
+  additionalLineItems: # provide if promotions or tax, tax last
+    - name: 'Promotions'
+      total: '($50.00)'
+    - name: 'Tax'
+      total: '$83.24'
+cartItems:
+  - name: 'Product 1'
+    imgUrl: '//placehold.it/40'
+    quantity: '100'
+    unitPrice: '$80.55'
+    originalTotal: '$5,000.00'
+    total: '$4,322,61'
+    discounts:
+      - name: 'Payment method discount'
+        total: '($40.00)'
+  - name: 'Product 2'
+    imgUrl: '//placehold.it/40'
+    quantity: '120'
+    unitPrice: '$80.55'
+    originalTotal: '$5,000.00'
+    total: '$4,322,61'
+    discounts:
+      - name: 'Payment method discount'
+        total: '($40.00)'

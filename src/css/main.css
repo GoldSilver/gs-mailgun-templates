@@ -81,6 +81,7 @@ h1, h2, h3 {
   font-weight: 400; }
 
 h1 {
+  margin: 0;
   font-size: 24px;
   font-weight: 500;
   /* 1.2em * 32px = 38.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
@@ -137,6 +138,15 @@ a {
   border-radius: 5px;
   text-transform: capitalize; }
 
+.text-danger {
+  color: red; }
+
+.underline {
+  text-decoration: underline; }
+
+.date {
+  margin: 0 0 10px; }
+
 /* -------------------------------------
     OTHER STYLES THAT MIGHT BE USEFUL
 ------------------------------------- */
@@ -181,9 +191,8 @@ a {
     Styles for the billing table
 ------------------------------------- */
 .invoice {
-  margin: 40px auto;
   text-align: left;
-  width: 80%; }
+  width: 100%; }
 
 .invoice td {
   padding: 5px 0; }
@@ -199,6 +208,9 @@ a {
   border-bottom: 2px solid #333;
   font-weight: 700; }
 
+.strikethrough {
+  text-decoration: line-through; }
+
 /* -------------------------------------
     RESPONSIVE AND MOBILE FRIENDLY STYLES
 ------------------------------------- */
@@ -209,7 +221,8 @@ a {
     font-weight: 800 !important;
     margin: 20px 0 5px !important; }
   h1 {
-    font-size: 22px !important; }
+    font-size: 22px !important;
+    margin: 0 0 5px !important; }
   h2 {
     font-size: 18px !important; }
   h3 {

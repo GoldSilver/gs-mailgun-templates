@@ -1,0 +1,24 @@
+---
+layout: default.hbs
+subject: 'Payment Cleared for Order {{buyPaid.orderId}}'
+preheader: 'Order Paid in Full'
+date: '{{buyPaid.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Order Paid in Full</h1>
+            <p>Thank you for your recent payment on order \{{buyPaid.orderId}}. The payment has cleared and your order is now paid in full.</p>
+            <ul>
+                <li>Payment Method: \{{buyPaid.payment.method}}</li>
+                <li>Amount Received: \{{buyPaid.payment.amount}}</li>
+                <li>Order Total: \{{buyPaid.orderTotal}}</li>
+                <li>Remaining Due: <b>\{{buyPaid.amountDue}}\{{#if buyPaid.payment.hasOverpaid}} - Overpayment of \{{buyPaid.payment.overpayment}} credited to account\{{/if}}</b></li>
+            </ul>
+            \{{#if buyPaid.payment.hasOverpaid}}
+                <p>Note, there was an overpayment on your order. We automatically credited the excess payment to your account balance.  You can use this balance like a store credit to apply to a future order, storage fees, or other charges.  Or you can log into your account to request a withdrawal.</p>
+            \{{/if}}
+            <p>Reminder that any <span class="underline">backorder delays apply from the date payment in full is cleared</span>, not the original order date. Please check the website/app for current shipping estimates.</p>
+        </td>
+    </tr>
+</table>

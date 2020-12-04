@@ -1,0 +1,33 @@
+---
+layout: default.hbs
+subject: 'Buy Order Confirmation {{buyOrder.orderId}}'
+preheader: 'Thank You for Your Purchase'
+date: '{{buyOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Thank You for Your Purchase</h1>
+            <p>Your order \{{buyOrder.Id}} has been received and the price is locked.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            \{{#if buyOrder.payment.hasAmountDue}}
+                <p><b>There is a balance due on your order; please send payment as soon as possible.</b></p>
+                <p><b class="underlined">Amount Due:</b> \{{buyOrder.invoice.amountDue}}</p>
+                \{{> payment-instructions payment=buyOrder.payment}}
+                <p><b>Orders not paid promptly may be cancelled.</b></p>
+            \{{/if}}
+            \{{#if buyOrder.payment.isRiskified}}
+                <p><b>Please note, every order is subject to a brief security review to help us combat fraud.</b> If there are any issues, we may reach out to you for identity verification.</p>
+            \{{/if}}
+            <p>Reminder, all cancelled orders with a price lock are subject to potential market-loss charges, per <a href="{{default.termsUrl}}">the terms</a> agreed to when your order was placed.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-buy-summary}}
+        </td>
+    </tr>
+</table>

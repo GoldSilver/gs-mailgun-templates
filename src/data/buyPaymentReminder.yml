@@ -1,0 +1,26 @@
+date: 'December 3, 2020'
+orderId: '#1234'
+isFinalNotice: true
+amountDue: '$13,238.88'
+payment:
+  isRiskified: false # true if method equals 'card' or 'paypal'
+  method:
+    name: 'Wire' # 'Check', 'Wire', 'PayPal', 'BitPay', 'Account Balance', 'Card'
+    isCheck: false
+    isWire: true
+    isPayPal: false
+    isCrypto: false
+    isAccount: false
+    isCard: false
+  hasAmountDue: true # true if invoice.amountDue > 0 and not already processing a payment
+  checkInstructions: #properties can be blank if isCheck false
+    requiresIdentityVerification: true
+    memo: '#1234' # order id
+  wireInstructions: #properties can be blank if isWire false
+    obi1: 'Order #1234' # 'Order #x' where x is order id if buy order, otherwise 'Storage #x' where x is storage account id
+    obi2: 'Zachary Lincoln' # if buy for delivery use shipping address name, otherwise storage account cert of title
+  cryptoInstructions: #properties can be blank if isCrypto false
+    gsUrl: 'https://phoenix-q2.bullioninternational.info' # url for order detail page (shows payment instructions
+    bitPayUrl: 'https://bitpay.com/invoice/1234'
+  payPalInstructions:
+    gsUrl: 'https://phoenix-q2.bullioninternational.info' # url for order detail page (shows payment instructions

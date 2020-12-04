@@ -1,0 +1,9 @@
+date: 'December 3, 2020'
+orderId: '#1234'
+orderTotal: '($12,589.02)'
+amountDue: 'Paid in Full'
+payment:
+  method: 'Check' # 'Check' or 'Wire'
+  amount: '$12,601.75'
+  hasOverpaid: true
+  overpayment: '$12.73'

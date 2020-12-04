@@ -1,0 +1,24 @@
+---
+layout: default.hbs
+subject: 'Your Order {{buyCancelled.orderId}} Has Been Cancelled'
+preheader: 'Your recent order with GoldSilver.com has been cancelled'
+date: '{{buyCancelled.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Recent Order Has Been Cancelled\{{#if buyCancelled.hasMarketLossCharge}}; Market-Loss Fees Were Charged\{{/if}}</h1>
+            <p>Your recent order with GoldSilver.com has been cancelled.</p>
+            \{{#if buyCancelled.hasMarketLossCharge}}
+                <p>As a reminder, according to <a href="{{default.termsUrl}}">the terms you agreed to at checkout</a>, when order prices are locked market-loss fees apply to orders cancelled by the customer or not paid promptly.</p>
+                <p>Your security deposit method has been charged in accordance with this policy:</p>
+                <p>Deposit method: \{{buyCancelled.deposit.label}}<br>Total market loss charge: \{{buyCancelled.deposit.chargedAmount}}</p>
+                <p>Market loss terms agreed to on: \{{buyCancelled.orderDateTime}}<br>At IP address: \{{buyCancelled.ipAddress}}</p>
+                <p>These market-loss fees help keep prices low for all customers by covering the losses incurred by our company from locking prices in the marketplace and the administrative costs of collecting on orders whose obligations were not fulfilled.</p>
+            \{{else}}
+                <p>We have waived any market-loss fees related to this order. Any security holds placed for this order will be automatically released (if you used a card, please allow up to 7 days for the release to be reflected at your bank).</p>
+            \{{/if}}
+            <p>Detailed transaction records are available in <a href="\{{buyCancelled.gsUrl}}">your account</a>.</p>
+        </td>
+    </tr>
+</table>
