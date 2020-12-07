@@ -1,0 +1,26 @@
+---
+layout: default.hbs
+subject: 'Order Cancelled, Sell Order {{sellCancelled.orderId}}'
+preheader: 'Your order has been cancelled'
+date: '{{sellCancelled.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Sell Order Cancelled</h1>
+            <p>Your sell order \{{sellCancelled.orderId}} was cancelled.</p>
+            \{{#if sellCancelled.hasMarketLossCharge}}
+                <p>Per the terms you agreed to when placing your order, a market loss fee was charged to your security deposit method.</p>
+                <p><b>Security Method:</b> \{{sellCancelled.deposit.label}}<br><b>Market Loss Charge:</b> \{{sellCancelled.deposit.chargedAmount}}</p>
+                <p>This charge covers any change in the spot market since your price was locked, spreads between buy and sell prices of the metals not received, and associated administrative costs, and is required to help keep prices low for all customers. <a href="{{default.termsUrl}}">Terms of purchase and sale</a>.</p>
+            \{{/if}}
+            <p>If you do not understand why this action was taken, please reply to this email or <a href="mailto:{{default.supportEmail}}">contact customer service</a>.</p>
+            <p>No further action is required. Any additional hold on your account or security method will be automatically released (the process can take up to seven business days depending on your bank).</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-sell-summary}}
+        </td>
+    </tr>
+</table>

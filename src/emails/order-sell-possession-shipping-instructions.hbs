@@ -1,0 +1,20 @@
+---
+layout: default.hbs
+subject: 'Update: Send Your Metals, Sell Order {{sellOrder.orderId}}'
+preheader: 'We have determined the best place to receive your metals'
+date: '{{sellOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Sell Order Confirmed; Please Send Your Metals to the Vault</h1>
+            <p>We’ve determined the best place to receive your metals for sell order \{{sellOrder.orderId}}.</p>
+            {{> shipping-instructions}}
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-sell-summary}}
+        </td>
+    </tr>
+</table>

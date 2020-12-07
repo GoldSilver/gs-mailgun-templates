@@ -1,0 +1,26 @@
+---
+layout: default.hbs
+subject: 'Sell Order {{sellOrder.orderId}} Being Reviewed'
+preheader: 'Thank You for Your Sell Order'
+date: '{{sellOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Thank You for Your Sell Order</h1>
+            <p>We’ve received your order \{{sellOrder.orderId}} to sell precious metals currently in your possession and are reviewing the details. <b>This may take up to one business day, as we determine the best location to receive your metals</b>.</p>
+            <p>Once accepted, we will follow up with complete order details and instructions on where to send your metals.</p>
+            <p>Until then, your price is locked.</p>
+            <p>Note:</p>
+            <ul>
+                <li><b>Please do not send metals until instructed in a follow-up message.</b></li>
+                <li>And, please do not use the shipping instructions from a previous sell order, as instructions change between orders. This may significantly delay your order.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-sell-summary}}
+        </td>
+    </tr>
+</table>

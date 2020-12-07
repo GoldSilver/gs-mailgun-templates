@@ -1,0 +1,32 @@
+---
+layout: default.hbs
+subject: 'IRA Sell Order {{sellOrder.orderId}}; Metals Not Received'
+preheader: 'This is an reminder that metals have not been received'
+date: '{{sellOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Reminder: Please Send Client's Metals Promptly</h1>
+            <p>This is an automated reminder that metals have not yet been received for processing at our vault for sell order \{{sellOrder.orderId}}.</p>
+            <p>If you have already sent your client’s metals, thank you, and please reply to this message with tracking information.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <!-- @todo: well -->
+            <h2>Reminder: Please Send Your Metals Promptly</h2>
+            <p>As a reminder, your metals are due at our warehouse as soon as possible.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> shipping-instructions}}
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-sell-summary}}
+        </td>
+    </tr>
+</table>

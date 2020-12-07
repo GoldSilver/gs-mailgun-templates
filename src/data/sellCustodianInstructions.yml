@@ -1,0 +1,7 @@
+orderDateTime: '11/25/2020 7:12pm UTC'
+ipAddress: '255.255.255.255'
+custodian:
+  name: 'Equity Trust'
+  accountNumber: '9876'
+  clientName: 'John Smith'
+  clientEmail: 'customer@example.com'

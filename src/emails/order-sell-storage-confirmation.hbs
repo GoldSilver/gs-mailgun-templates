@@ -10,6 +10,7 @@ date: '{{sellOrder.date}}'
             \{{#if sellOrder.isLiquidation}}
                 <h1>Sell Order Confirmation</h1>
                 <p>This is a confirmation for sell order \{{sellOrder.orderId}}.</p>
+                <!-- @todo: well -->
                 <p><b>Note: This sell order was executed to settle an outstanding balance for overdue storage or other account fees, or for an unfulfillable order.</b> We’ve attempted to contact you on several occasions regarding this balance due, but have not been able to resolve it in a timely manner. Per the <a href="{{default.storageAgreementUrl}}">Vault Storage Customer Agreement</a>, we reserve the right to liquidate positions to settle unpaid balances. Any amount remaining after settlement is deposited as a credit on your account.</p>
             \{{else}}
                 <h1>Thank You for Your Sell Order</h1>
