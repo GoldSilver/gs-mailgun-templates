@@ -1,6 +1,15 @@
 date: 'December 3, 2020'
 orderId: '#1234'
 isLiquidation: false
+isFinalNotice: false
+instructionsUrl: 'https://phoenix-q2.bullioninternational.info'
+disbursement:
+  methodName: 'Check' # 'Check', 'Wire', 'Account', '3rd Party IRA'
+  label: 'Chase Bank, Account # ...1234' # only if wire
+  isCheck: true
+  isIra: false
+  isWire: false
+  isAccount: false
 invoice:
   printableUrl: 'https://phoenix-q2.bullioninternational.info'
   subtotalForMetals: '$2,422.68'

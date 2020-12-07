@@ -1,0 +1,30 @@
+---
+layout: default.hbs
+subject: 'Please Ship IRA Sell Order {{sellOrder.orderId}} Confirmed'
+preheader: 'Sell Order Confirmed, Send Client Metals'
+date: '{{sellOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Sell Order Confirmed, Send Client Metals</h1>
+            <p>Your IRA client has initiated a sell order with GoldSilver.com for some of their precious metals holdings.</p>
+            <ul>
+                <li>Custodian: \{{sellCustodianInstructions.custodian.name}}</li>
+                <li>IRA Account Number: \{{sellCustodianInstructions.custodian.accountNumber}}</li>
+                <li>Client Name: \{{sellCustodianInstructions.custodian.clientName}}</li>
+                <li>Client Email: \{{sellCustodianInstructions.custodian.clientEmail}}</li>
+                <li>Order Date/Time: \{{sellCustodianInstructions.orderDateTime}}</li>
+                <li>Client IP Address: \{{sellCustodianInstructions.ipAddress}}</li>
+            </ul>
+            <p>To complete this order, please follow these directions to send the metals described below.</p>
+            <p>Proceeds will be remitted within 2-5 business days from receipt of the metals at our designated facility.  Please note the delivery address carefully, as we use multiple receivers and they may differ from order to order.</p>
+            {{> shipping-instructions}}
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-sell-summary}}
+        </td>
+    </tr>
+</table>

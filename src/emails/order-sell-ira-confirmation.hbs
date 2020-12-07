@@ -1,0 +1,22 @@
+---
+layout: default.hbs
+subject: 'Sell Order {{sellOrder.orderId}} Being Reviewed'
+preheader: 'Thank You for Your Sell Order'
+date: '{{sellOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Thank You for Your Sell Order</h1>
+            <p>We’ve received your order \{{sellOrder.orderId}} to sell precious metals currently held in your self-directed IRA. <b>We are confirming the details with your custodian and arranging safe transport of your metals to be sold</b>.</p>
+            <p>This is usually a quick process, but depending on your custodian may take up to three business days.</p>
+            <p>Once accepted, we will follow up with complete order details.</p>
+            <p>Until then, your price is locked.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-sell-summary}}
+        </td>
+    </tr>
+</table>

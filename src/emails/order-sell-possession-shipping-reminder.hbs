@@ -1,0 +1,38 @@
+---
+layout: default.hbs
+subject: 'Reminder: Ship Metals, Sell Order {{sellOrder.orderId}}'
+preheader: 'This is a reminder that you need to ship metals for sell order {{sellOrder.orderId}}'
+date: '{{sellOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Reminder: Please Send Your Metals Promptly</h1>
+            \{{#if sellOrder.isFinalNotice}}
+                <p><b>FINAL NOTICE:</b> Metals must be shipped immediately for your sell order \{{sellOrder.orderId}}.</p>
+                <p><span class="underline">If tracking information is not received promptly, your order may be cancelled and subject to market loss charges.</span></p>
+                <p>If you have already sent your metals, thank you. Please <b><a href="\{{sellOrder.instructionsUrl}}">click here to provide tracking information</a></b> or reply to this message with details to ensure your order is not cancelled.</p>
+            \{{else}}
+                <p>This is an automated reminder that you need to ship metals for sell order \{{sellOrder.orderId}}.</p>
+                <p>If you have already sent your metals, thank you. Please <b><a href="\{{sellOrder.instructionsUrl}}">click here to provide tracking information</a></b> or reply to this message with details to ensure your order is not cancelled.</p>
+            \{{/if}}
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <!-- @todo: well -->
+            <h2>Reminder: Please Send Your Metals Promptly</h2>
+            <p>As a reminder, your metals are due at our warehouse as soon as possible.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <p>Once your metals are delivered to the vault, it can take a few days for the processing center to mark your materials received, especially if there are questions or additional validation needed. Once processed, we’ll follow up with confirmation and payment details. If you have any questions, please don’t hesitate to reply to this message or <a href="mailto:{{default.supportEmail}}">contact customer service</a>.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> shipping-instructions}}
+        </td>
+    </tr>
+</table>
