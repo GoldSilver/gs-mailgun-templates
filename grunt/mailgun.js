@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         recipient: '<%= secrets.mailgun.recipient %>', // See README for secrets.json or replace this with your preferred recipient
         subject: 'This is a test email'
       },
-      src: ['<%= paths.dist %>/'+grunt.option('template')]
+      src: ['<%= paths.example %>/'+grunt.option('template')]
     }
   }
 };
