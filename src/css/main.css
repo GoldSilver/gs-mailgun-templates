@@ -201,11 +201,11 @@ a {
   width: 100%; }
 
 .invoice .invoice-items td {
-  border-top: #333 1px solid; }
+  border-top: #d9d9d9 1px solid; }
 
 .invoice .invoice-items .total td {
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
   font-weight: 700; }
 
 .strikethrough {
