@@ -83,10 +83,37 @@
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">To complete this order, please follow these directions to send the metals described below.</p>
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Proceeds will be remitted within 2-5 business days from receipt of the metals at our designated facility.  Please note the delivery address carefully, as we use multiple receivers and they may differ from order to order.</p>
             <h2 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 40px 0 0; line-height: 1.2em; font-weight: 400; font-size: 18px;">Shipping Instructions</h2>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Click here to securely access the shipping instructions, packing slip you must include in your parcels, and tips on safely packing your metals:</p>
-            <p class="aligncenter" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-align: center; font-size: 14px; margin-bottom: 10px; font-weight: normal;">
-                <a href="{{sellOrder.instructionsUrl}}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">Metal Shipping Instructions for Order {{sellOrder.orderId}}</a>
-            </p>
+            <table class="invoice" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-align: left; width: 100%;" width="100%" align="left">
+                <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0;" valign="top">
+                        <table class="invoice-items" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; width: 100%;" width="100%">
+                            {{#each shippingInstructions.packages as |package packageIndex|}}
+                            <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                                <td colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #d9d9d9 1px solid;" valign="top">Packing Slip #{{packageIndex}} </td>
+                            </tr>
+                            <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                                <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #d9d9d9 1px solid;" valign="top">
+                                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Ship to:</b></p>
+                                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">{{{package.shipTo}}}</p>
+                                </td>
+                                <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #d9d9d9 1px solid;" valign="top">
+                                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">From:</b></p>
+                                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Order number: {{../sellOrder.orderId}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Trade number: {{package.tradeNumber}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Customer name: {{../sellOrder.customer.name}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Customer account number: {{../sellOrder.customer.id}}</p>
+                                </td>
+                            </tr>
+                            <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                                <td colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #d9d9d9 1px solid;" valign="top">
+                                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Included in this shipment:</b></p>
+                                    {{#each package.items as |item|}}
+                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">{{item.name}}, Quantity: {{item.quantity}}</p>
+                                    {{/each}}
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </td>
+                </tr>
+            </table>
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your metals will be inspected by our warehouse team. If they differ from what was described when you placed this order, the order will be automatically adjusted:</p>
             <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
                 <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">Added items will be purchased at then-current market prices.</li>

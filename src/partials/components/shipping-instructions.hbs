@@ -1,8 +1,35 @@
 <h2>Shipping Instructions</h2>
-<p>Click here to securely access the shipping instructions, packing slip you must include in your parcels, and tips on safely packing your metals:</p>
-<p class="aligncenter">
-    <a href="\{{sellOrder.instructionsUrl}}">Metal Shipping Instructions for Order \{{sellOrder.orderId}}</a>
-</p>
+<table class="invoice">
+    <tr>
+        <td>
+            <table class="invoice-items" cellpadding="0" cellspacing="0">
+                \{{#each shippingInstructions.packages as |package packageIndex|}}
+                <tr>
+                    <td colspan="2">Packing Slip #\{{packageIndex}} </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Ship to:</b></p>
+                        <p>\{{{package.shipTo}}}</p>
+                    </td>
+                    <td>
+                        <p><b>From:</b></p>
+                        <p>Order number: \{{../sellOrder.orderId}}<br>Trade number: \{{package.tradeNumber}}<br>Customer name: \{{../sellOrder.customer.name}}<br>Customer account number: \{{../sellOrder.customer.id}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p><b>Included in this shipment:</b></p>
+                        \{{#each package.items as |item|}}
+                            <p>\{{item.name}}, Quantity: \{{item.quantity}}</p>
+                        \{{/each}}
+                    </td>
+                </tr>
+                \{{/each}}
+            </table>
+        </td>
+    </tr>
+</table>
 <p>Your metals will be inspected by our warehouse team. If they differ from what was described when you placed this order, the order will be automatically adjusted:</p>
 <ul>
     <li>Added items will be purchased at then-current market prices.</li>

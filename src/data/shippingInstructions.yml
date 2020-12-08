@@ -1,0 +1,15 @@
+packages:
+  - shipTo: 'Dillion Gage<br>ATTN: C/O DGM<br>17744 Brown Ports Apt. 641, Suite 726<br>West Dandre, HI, Montenegro, 89906'
+    tradeNumber: '5678'
+    items:
+      - name: '1 oz Product 1'
+        quantity: '23'
+      - name: '10 oz Product 2'
+        quantity: '83'
+  - shipTo: 'AMARK<br>ATTN: Sell AMARK<br>1234 Example St., New York City, NY, 00001'
+    tradeNumber: '12-9876'
+    items:
+      - name: '100 oz Product 3'
+        quantity: '1'
+      - name: '1 oz Product 4'
+        quantity: '3'
