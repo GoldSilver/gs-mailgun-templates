@@ -30,3 +30,6 @@ cartItems:
         quantity: '120'
         unitPrice: '$80.55'
         total: '$4,322,61'
+customer:
+  name: 'John Smith'
+  id: '1234-56'

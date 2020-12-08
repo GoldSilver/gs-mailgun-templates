@@ -1,15 +1,15 @@
-$brand-primary: #3958aa;
+$brand-primary: #C47918;
 $brand-contrast: #edb54d;
 
-$brand-success: #28a943;
-$brand-info: #5bc0de;
-$brand-warning: #ffc107;
-$brand-danger: #ab3c3c;
+$brand-success: #558C41;
+$brand-info: #3881C2;
+$brand-warning: #FCCD67;
+$brand-danger: #d9534f;
 
-$text-color: #333333;
+$text-color: #000000;
 $text-muted: #a2a2a2;
 $white: #ffffff;
-$gray-chalice: #d9d9d9;
+$gray: #d9d9d9;
 
 /* -------------------------------------
     GLOBAL
@@ -68,7 +68,7 @@ body {
 ------------------------------------- */
 .main {
   background-color: #fff;
-  border: 1px solid $gray-chalice;
+  border: 1px solid $gray;
   border-radius: 3px;
 }
 
@@ -256,11 +256,11 @@ a {
   width: 100%;
 }
 .invoice .invoice-items td {
-  border-top: #eee 1px solid;
+  border-top: $gray 1px solid;
 }
 .invoice .invoice-items .total td {
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border-top: 2px solid $gray;
+  border-bottom: 2px solid $gray;
   font-weight: 700;
 }
 

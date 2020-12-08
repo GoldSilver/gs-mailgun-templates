@@ -75,7 +75,7 @@ body {
 ------------------------------------- */
 h1, h2, h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #333333;
+  color: #000000;
   margin: 40px 0 0;
   line-height: 1.2em;
   font-weight: 400; }
@@ -118,15 +118,15 @@ ul, ol {
     LINKS & BUTTONS
 ------------------------------------- */
 a {
-  color: #5bc0de;
+  color: #3881C2;
   text-decoration: underline;
   font-size: 14px; }
 
 .btn-primary {
   text-decoration: none;
   color: #ffffff;
-  background-color: #3958aa;
-  border: solid #2a407c;
+  background-color: #C47918;
+  border: solid #8d5711;
   border-width: 10px 20px;
   line-height: 2em;
   /* 2em * 14px = 28px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
@@ -178,13 +178,13 @@ a {
     text-decoration: none;
     font-weight: 500; }
   .alert.alert-warning {
-    background: #ffc107; }
+    background: #FCCD67; }
   .alert.alert-danger {
-    background: #ab3c3c; }
+    background: #d9534f; }
   .alert.alert-success {
-    background: #28a943; }
+    background: #558C41; }
   .alert.alert-info {
-    background: #5bc0de; }
+    background: #3881C2; }
 
 /* -------------------------------------
     INVOICE
@@ -201,11 +201,11 @@ a {
   width: 100%; }
 
 .invoice .invoice-items td {
-  border-top: #eee 1px solid; }
+  border-top: #d9d9d9 1px solid; }
 
 .invoice .invoice-items .total td {
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
   font-weight: 700; }
 
 .strikethrough {
