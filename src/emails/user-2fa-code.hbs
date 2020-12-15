@@ -1,0 +1,16 @@
+---
+layout: default.hbs
+subject: '{{ user2faCode.code }} is your GoldSilver.com security code'
+preheader: 'Your one-time use code is valid for {{ user2faCode.minutesValid }} minutes.'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your One-time Access Code</h1>
+            <p>A code was requested from your GoldSilver.com account to verify your sign in attempt. Please enter this code in the app/website to continue:</p>
+            <p class="mega">\{{user2faCode.code}}</p>
+            <p>Note: this code is only valid for {{ user2faCode.minutesValid }} minutes. After that time you will have to request a new one to continue.</p>
+            {{> user-request-info}}
+        </td>
+    </tr>
+</table>

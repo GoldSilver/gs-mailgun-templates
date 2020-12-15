@@ -1,0 +1,15 @@
+---
+layout: default.hbs
+subject: 'Important: Email Address Changed'
+preheader: 'Please review requested change to email address.'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Account’s Email Address Has Been Changed</h1>
+            <p>We received a request to change the email address of your GoldSilver.com account. For your security, we send this message to your prior email address of record to verify the request came from you.</p>
+            <p>Prior email (this address): \{{userEmailChange.oldEmail}}<br>New Email: \{{userEmailChange.newEmail}}</p>
+            {{> user-request-info}}
+        </td>
+    </tr>
+</table>

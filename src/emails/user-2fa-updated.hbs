@@ -1,0 +1,19 @@
+---
+layout: default.hbs
+subject: 'Important: Two-factor authentication settings changed'
+preheader: 'Please review requested change to two-factor authentication settings.'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Two-factor Authentication Settings Have Changed</h1>
+            <p>The following change was recently made to your account with GoldSilver.com:</p>
+            \{{#if user2faChange.phoneAdded}}
+                <p><b>\{{ user2faChange.phoneLabel}}</b> now <b>added</b> as a two-factor authentication method.</p>
+            \{{else}}
+                <p><b>\{{user2faChange.phoneLabel}} removed</b> as a two-factor authentication method.</p>
+            \{{/if}}
+            {{> user-request-info}}
+        </td>
+    </tr>
+</table>

@@ -1,14 +1,16 @@
 ---
 layout: default.hbs
-subject: You've been invited to GoldSilver.com
-preheader: Please set a password to sign into your new account.
+subject: "You've been invited to GoldSilver.com"
+preheader: 'Please set a password to sign into your new account.'
 ---
 <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
         <td class="content-block">
             <h1>You've been invited to GoldSilver.com.</h1>
+            <p>A user has been created for you at GoldSilver.com, which you can use to access restricted content, view your order history and holdings, and much more.</p>
             <p>To sign in and use your new account, please create a password using the link below:</p>
-            <p><a href="\{{ set_password }}">Set password</a></p>
+            <p class="aligncenter"><a href="\{{ userPasswordChange.tokenizedUrl }}" class="btn btn-primary">Set Your Password</a><br><small><a href="\{{userPasswordChange.tokenizedUrl}}">\{{userPasswordChange.tokenizedUrl}}</a></small></p>
+            <p>If you did not request the setup of this account, or have any questions, please let us know by replying to this email or <a href="{{default.supportEmail}}">contacting customer service</a>.</p>
         </td>
     </tr>
 </table>
