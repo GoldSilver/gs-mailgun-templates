@@ -1,20 +1,2 @@
 date: 'December 3, 2020'
 orderId: '#1234'
-packages:
-  - carrier: 'UPS'
-    trackingNumber: '1000000632'
-    products:
-      - name: '1oz Product 1'
-        quantity: '100'
-      - name: '10oz Product 2'
-        quantity: '3'
-  - carrier: 'FedEx'
-    trackingNumber: '2000000555'
-    products:
-      - name: '10oz Product 3'
-        quantity: '14'
-remainingProducts:
-  - name: '1oz Product 4'
-    quantity: '3'
-  - name: '1oz Product 5'
-    quantity: '80'

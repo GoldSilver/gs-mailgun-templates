@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Your Order Has Shipped {{buyShippingFull.orderId}}</title>
+    <title>Your Email Address Has Been Updated</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -61,7 +61,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
-                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{buyShippingFull.date}}</strong></p>
+                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"></strong></p>
                                     </td>
                                 </tr>
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -70,20 +70,16 @@
 <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Your Order Has Shipped</h1>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your order {{buyShippingFull.orderId}} is on its way.  All of the items have now shipped.</p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Please reference the tracking information below for detailed status on when to expect your packages.</p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Reminder: most of our shipments are sent with an adult signature required for maximum security. Please plan to be available to receive your package(s) and have ID to show the carrier.</p>
-            {{#each shippingPackages as |package|}}
-                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{package.carrier}} {{package.trackingNumber}}</b></p>
-                <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
-                    {{#each package.products as |product|}}
-                        <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">{{product.name}}, Quantity: {{product.quantity}}</li>
-                    {{/each}}
-                </ul>
-            {{/each}}
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">This notice is sent automatically when we’re informed by the vaults used to fulfill your order that tracking information is now available (which can occur shortly before or after it is provided to the carrier).</p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">If there are any issues with your shipment, please <a href="mailto:support@goldsilver.com" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">contact customer service immediately</a>.</p>
+            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Your Account’s Email Address Has Been Changed</h1>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">We received a request to update the email address of record for your GoldSilver.com account.</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Prior email (this address): {{userEmailChange.oldEmail}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">New Email: {{userEmailChange.newEmail}}</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Please note</b> this will also change the username you use to sign into the GoldSilver website and phone app, as your (new) email is your username.</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Requested from:</b></p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Location: {{userRequest.location}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">IP Address: {{userRequest.ipAddress}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Time: {{userRequest.dateTime}}</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b class="text-danger" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: red;">Didn't request this change?</b></p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">If you did not make or do not recognize this request, please click the following link to secure your account:</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><a href="{{userRequest.lockUrl}}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">I did NOT request this change</a></p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Clicking this link will immediately lock your account and sign you out of all devices.  <span class="underline" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-decoration: underline;">You will be required to reset your password</span> to unlock your account.</p>
         </td>
     </tr>
 </table>

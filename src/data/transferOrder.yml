@@ -1,0 +1,14 @@
+orderId: '#1234'
+date: 'December 3, 2020'
+invoice:
+  shipping: '$45.00' # if '$0.00' then replace with 'FREE'
+  total: '$45.00'
+  amountDue: '$0.00'
+  printableUrl: 'https://example.com/'
+cartItems:
+  - name: 'Product 1'
+    imgUrl: '//placehold.it/40'
+    quantity: '100'
+  - name: 'Product 2'
+    imgUrl: '//placehold.it/40'
+    quantity: '120'

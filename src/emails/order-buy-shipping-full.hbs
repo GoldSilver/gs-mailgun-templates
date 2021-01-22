@@ -9,7 +9,7 @@ date: '{{buyShippingFull.date}}'
         <td class="content-block">
             <h1>Your Order Has Shipped</h1>
             <p>Your order \{{buyShippingFull.orderId}} is on its way.  All of the items have now shipped.</p>
-            \{{> tracking packages=buyShippingFull.packages }}
+            {{> tracking }}
         </td>
     </tr>
 </table>

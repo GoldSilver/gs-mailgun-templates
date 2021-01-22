@@ -1,0 +1,19 @@
+- carrier: 'UPS'
+  trackingNumber: '1000000632'
+  products:
+  - name: '1 oz Product 1'
+    quantity: '100'
+  - name: '10 oz Product 2'
+    quantity: '3'
+- carrier: 'FedEx'
+  trackingNumber: '2000000555'
+  products:
+  - name: '10 oz Product 3'
+    quantity: '14'
+- carrier: 'UPS'
+  trackingNumber: '1000000638'
+  products:
+  - name: '1 oz Product 4'
+    quantity: '3'
+  - name: '1 oz Product 5'
+    quantity: '80'

@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Important: Account Locked</title>
+    <title>Partial Shipment for Order {{transferOrder.orderId}}</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -61,7 +61,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
-                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"></strong></p>
+                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{transferOrder.date}}</strong></p>
                                     </td>
                                 </tr>
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -70,27 +70,19 @@
 <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Your account has been locked.</h1>
+            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Part of Your Order Has Shipped</h1>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">A portion of your order {{transferOrder.orderId}} is on its way. The remaining items will ship separately.</p>
+            {{> tracking packages=shippingPackages }}
         </td>
     </tr>
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Customer service has been notified that you've reported an unauthorized change to your account, and your account has been locked to prevent further activity.</p>
-        </td>
-    </tr>
-    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Please reset your password to unlock your account:</p>
-        </td>
-    </tr>
-    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><a href="" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">Reset Your Password</a></p>
-        </td>
-    </tr>
-    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
-        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Contact customer support if you have any questions or concerns.</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Items not yet shipped:</b></p>
+            <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
+                {{#each shippingRemainingProducts as |product|}}
+                <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">{{product.name}}, Quantity: {{product.quantity}}</li>
+                {{/each}}
+            </ul>
         </td>
     </tr>
 </table>

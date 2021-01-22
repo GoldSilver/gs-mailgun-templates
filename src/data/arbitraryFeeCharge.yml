@@ -1,0 +1,5 @@
+date: 'December 3, 2020'
+payment:
+  method: 'VISA ending in *9999'
+  amount: '$12,601.75'
+reason: 'Reshipping cost for buy order #1234'

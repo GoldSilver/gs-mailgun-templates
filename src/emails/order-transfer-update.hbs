@@ -1,0 +1,20 @@
+---
+layout: default.hbs
+subject: 'Updated Transfer Order Confirmation {{transferOrder.orderId}}'
+preheader: 'Your Order Has Been Updated'
+date: '{{transferOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Transfer Order Has Been Updated</h1>
+            <p>Changes were made to your transfer order \{{transferOrder.orderId}}; please see the updated confirmation below.  Your invoice online will also reflect these changes.</p>
+            <p>If you do not understand why these changes were made, please <a href="mailto:{{default.supportEmail}}">contact customer service</a>.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            {{> order-transfer-summary}}
+        </td>
+    </tr>
+</table>
