@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Your Order Has Shipped {{buyShippingFull.orderId}}</title>
+    <title>Updated Transfer Order Confirmation {{transferOrder.orderId}}</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -61,7 +61,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
                                     <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
-                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{buyShippingFull.date}}</strong></p>
+                                        <p class="date" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; margin: 0 0 10px; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><strong style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{transferOrder.date}}</strong></p>
                                     </td>
                                 </tr>
                                 <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -70,20 +70,49 @@
 <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
-            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Your Order Has Shipped</h1>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your order {{buyShippingFull.orderId}} is on its way.  All of the items have now shipped.</p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Please reference the tracking information below for detailed status on when to expect your packages.</p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Reminder: most of our shipments are sent with an adult signature required for maximum security. Please plan to be available to receive your package(s) and have ID to show the carrier.</p>
-            {{#each shippingPackages as |package|}}
-                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{package.carrier}} {{package.trackingNumber}}</b></p>
-                <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal; padding-left: 0;">
-                    {{#each package.products as |product|}}
-                        <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-left: 5px; list-style-position: inside;">{{product.name}}, Quantity: {{product.quantity}}</li>
-                    {{/each}}
-                </ul>
-            {{/each}}
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">This notice is sent automatically when we’re informed by the vaults used to fulfill your order that tracking information is now available (which can occur shortly before or after it is provided to the carrier).</p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">If there are any issues with your shipment, please <a href="mailto:support@goldsilver.com" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">contact customer service immediately</a>.</p>
+            <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: 500; font-size: 24px;">Your Transfer Order Has Been Updated</h1>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Changes were made to your transfer order {{transferOrder.orderId}}; please see the updated confirmation below.  Your invoice online will also reflect these changes.</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">If you do not understand why these changes were made, please <a href="mailto:support@goldsilver.com" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">contact customer service</a>.</p>
+        </td>
+    </tr>
+    <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+        <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
+            <h2 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 40px 0 0; line-height: 1.2em; font-weight: 400; font-size: 18px;">Transfer Order Summary</h2>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">A <a href="{{transferOrder.invoice.printableUrl}}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">printable invoice</a> is also available in your GoldSilver.com account.</p>
+            <table class="invoice" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; text-align: left; width: 100%;" width="100%" align="left">
+                <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0;" valign="top">
+                        <table class="invoice-items" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; width: 100%;" width="100%">
+                            {{#each transferOrder.cartItems as |item|}}
+                                <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #d9d9d9 1px solid;" valign="top"><img src="{{item.imgUrl}}" alt="{{item.name}}" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; max-width: 100%;"></td>
+                                    <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 5px 0; border-top: #d9d9d9 1px solid;" valign="top">{{item.name}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;"><br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Quantity: {{item.quantity}}</td>
+                                    <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: #d9d9d9 1px solid;" valign="top" align="right"></td>
+                                </tr>
+                            {{/each}}
+                            <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                                <td class="alignright" colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; font-weight: 700;" valign="top" align="right">Shipping</td>
+                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; font-weight: 700;" valign="top" align="right">{{transferOrder.invoice.shipping}}</td>
+                            </tr>
+                            {{#each transferOrder.invoice.additionalLineItems as |lineItem|}}
+                                <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                                    <td class="alignright" colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; font-weight: 700;" valign="top" align="right">{{lineItem.name}}</td>
+                                    <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; font-weight: 700;" valign="top" align="right">{{lineItem.total}}</td>
+                                </tr>
+                            {{/each}}
+                            <tr class="total" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                                <td class="alignright" colspan="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; font-weight: 700;" valign="top" align="right"><b style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">Total</b></td>
+                                <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0; border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9; font-weight: 700;" valign="top" align="right">{{transferOrder.invoice.total}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
+                    <td class="alignright" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; text-align: right; padding: 5px 0;" valign="top" align="right">
+                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">All prices in US Dollars (USD)</p>
+                    </td>
+                </tr>
+            </table>
         </td>
     </tr>
 </table>

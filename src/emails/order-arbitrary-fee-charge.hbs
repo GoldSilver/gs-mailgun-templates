@@ -1,0 +1,17 @@
+---
+layout: default.hbs
+subject: 'Receipt for Recent Charge'
+preheader: 'Your recent activity with GoldSilver.com resulted in an additional charge.'
+date: '{{arbitraryFeeCharge.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Receipt for Recent Charge</h1>
+            <p>Your recent activity with GoldSilver.com resulted in an additional charge posted to your account. This email will serve as your receipt.</p>
+            <p><strong>Payment Method:</strong> \{{arbitraryFeeCharge.payment.method}}<br><strong>Amount:</strong> \{{arbitraryFeeCharge.payment.amount}}</p>
+            <p><strong>Reason:</strong> \{{arbitraryFeeCharge.reason}}</p>
+            <p>If you have any questions, please reply to this email or <a href="mailto:{{default.supportEmail}}">contact customer service.</a></p>
+        </td>
+    </tr>
+</table>

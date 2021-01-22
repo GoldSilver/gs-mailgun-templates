@@ -1,15 +1,15 @@
 ---
 layout: default.hbs
-subject: 'Partial Shipment for Order {{buyShippingPartial.orderId}}'
+subject: 'Partial Shipment for Order {{transferOrder.orderId}}'
 preheader: 'Part of Your Order Has Shipped'
-date: '{{buyShippingPartial.date}}'
+date: '{{transferOrder.date}}'
 ---
 <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
         <td class="content-block">
             <h1>Part of Your Order Has Shipped</h1>
-            <p>A portion of your order \{{buyShippingPartial.orderId}} is on its way. The remaining items will ship separately. </p>
-            {{> tracking }}
+            <p>A portion of your order \{{transferOrder.orderId}} is on its way. The remaining items will ship separately.</p>
+            \{{> tracking packages=shippingPackages }}
         </td>
     </tr>
     <tr>
@@ -17,7 +17,7 @@ date: '{{buyShippingPartial.date}}'
             <p><b>Items not yet shipped:</b></p>
             <ul>
                 \{{#each shippingRemainingProducts as |product|}}
-                    <li>\{{product.name}}, Quantity: \{{product.quantity}}</li>
+                <li>\{{product.name}}, Quantity: \{{product.quantity}}</li>
                 \{{/each}}
             </ul>
         </td>
