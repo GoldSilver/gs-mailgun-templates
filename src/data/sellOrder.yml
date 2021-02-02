@@ -1,6 +1,6 @@
 date: 'December 3, 2020'
 orderId: '#1234'
-isLiquidation: false
+isLiquidation: true
 isFinalNotice: false
 instructionsUrl: 'https://phoenix-q2.bullioninternational.info'
 disbursement:

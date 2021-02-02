@@ -10,10 +10,6 @@ date: '{{transferOrder.date}}'
             <h1>Part of Your Order Has Shipped</h1>
             <p>A portion of your order \{{transferOrder.orderId}} is on its way. The remaining items will ship separately.</p>
             \{{> tracking packages=shippingPackages }}
-        </td>
-    </tr>
-    <tr>
-        <td class="content-block">
             <p><b>Items not yet shipped:</b></p>
             <ul>
                 \{{#each shippingRemainingProducts as |product|}}

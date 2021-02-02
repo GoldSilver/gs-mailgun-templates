@@ -56,6 +56,10 @@ body {
 .content-block {
   padding: 0 0 20px; }
 
+.well {
+  padding: 0 20px 20px;
+  background-color: #ddd; }
+
 .header {
   width: 100%;
   margin-bottom: 20px; }
@@ -78,28 +82,28 @@ h1, h2, h3 {
   color: #000000;
   margin: 40px 0 0;
   line-height: 1.2em;
-  font-weight: 400; }
+  font-weight: bold; }
 
 h1 {
   margin: 0;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: bold;
   /* 1.2em * 32px = 38.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
   /*line-height: 38px;*/ }
 
 h2 {
-  font-size: 18px;
+  font-size: 22px;
   /* 1.2em * 24px = 28.8px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
   /*line-height: 29px;*/ }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   /* 1.2em * 18px = 21.6px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
   /*line-height: 22px;*/ }
 
 h4 {
-  font-size: 14px;
-  font-weight: 600; }
+  font-size: 16px;
+  font-weight: bold; }
 
 p, ul, ol {
   font-size: 14px;
@@ -126,7 +130,7 @@ a {
   text-decoration: none;
   color: #ffffff;
   background-color: #C47918;
-  border: solid #8d5711;
+  border: solid #C47918;
   border-width: 10px 20px;
   line-height: 2em;
   /* 2em * 14px = 28px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
@@ -141,7 +145,7 @@ a {
 .text-danger {
   color: red; }
 
-.underline {
+.underline, .underlined {
   text-decoration: underline; }
 
 .date {
@@ -170,13 +174,13 @@ a {
 
 .alert {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   padding: 20px;
   border-radius: 3px 3px 0 0;
   color: #ffffff; }
   .alert a {
     text-decoration: none;
-    font-weight: 500; }
+    font-weight: bold; }
   .alert.alert-warning {
     background: #FCCD67; }
   .alert.alert-danger {
@@ -206,7 +210,7 @@ a {
 .invoice .invoice-items .total td {
   border-top: 2px solid #d9d9d9;
   border-bottom: 2px solid #d9d9d9;
-  font-weight: 700; }
+  font-weight: bold; }
 
 .strikethrough {
   text-decoration: line-through; }
@@ -223,7 +227,7 @@ a {
   body {
     padding: 0 !important; }
   h1, h2, h3, h4 {
-    font-weight: 800 !important;
+    font-weight: bold !important;
     margin: 20px 0 5px !important; }
   h1 {
     font-size: 22px !important;

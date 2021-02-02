@@ -10,15 +10,7 @@ date: '{{buyOrder.date}}'
             <h1>Your Order Has Been Updated</h1>
             <p>Changes were made to your order \{{buyOrder.Id}}; please see the updated confirmation below.  Your invoice online will also reflect these changes.</p>
             <p>If you do not understand why these changes were made, please <a href="mailto:{{default.supportEmail}}">contact customer service</a>.</p>
-        </td>
-    </tr>
-    <tr>
-        <td class="content-block">
             {{> order-buy-summary}}
-        </td>
-    </tr>
-    <tr>
-        <td>
             \{{#if buyOrder.payment.hasAmountDue}}
                 <p><b>There is a balance due on your order; please send payment as soon as possible.</b></p>
                 <p><b class="underlined">Amount Due:</b> \{{buyOrder.invoice.amountDue}}</p>
