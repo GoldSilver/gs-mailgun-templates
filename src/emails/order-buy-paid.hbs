@@ -1,14 +1,14 @@
 ---
 layout: default.hbs
-subject: 'Payment Cleared for Order {{buyPaid.orderId}}'
+subject: 'Payment Cleared for Order {{buyOrder.orderId}}'
 preheader: 'Order Paid in Full'
-date: '{{buyPaid.date}}'
+date: '{{buyOrder.date}}'
 ---
 <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
         <td class="content-block">
             <h1>Order Paid in Full</h1>
-            <p>Thank you for your recent payment on order \{{buyPaid.orderId}}. The payment has cleared and your order is now paid in full.</p>
+            <p>Thank you for your recent payment on order \{{buyOrder.orderId}}. The payment has cleared and your order is now paid in full.</p>
             <ul>
                 <li>Payment Method: \{{buyPaid.payment.method}}</li>
                 <li>Amount Received: \{{buyPaid.payment.amount}}</li>

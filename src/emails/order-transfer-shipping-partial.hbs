@@ -9,7 +9,7 @@ date: '{{transferOrder.date}}'
         <td class="content-block">
             <h1>Part of Your Order Has Shipped</h1>
             <p>A portion of your order \{{transferOrder.orderId}} is on its way. The remaining items will ship separately.</p>
-            \{{> tracking packages=shippingPackages }}
+            {{> tracking }}
             <p><b>Items not yet shipped:</b></p>
             <ul>
                 \{{#each shippingRemainingProducts as |product|}}

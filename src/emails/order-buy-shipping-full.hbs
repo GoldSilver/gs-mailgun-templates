@@ -1,14 +1,14 @@
 ---
 layout: default.hbs
-subject: 'Your Order Has Shipped {{buyShippingFull.orderId}}'
+subject: 'Your Order Has Shipped {{buyOrder.orderId}}'
 preheader: 'Your order is on its way'
-date: '{{buyShippingFull.date}}'
+date: '{{buyOrder.date}}'
 ---
 <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
         <td class="content-block">
             <h1>Your Order Has Shipped</h1>
-            <p>Your order \{{buyShippingFull.orderId}} is on its way.  All of the items have now shipped.</p>
+            <p>Your order \{{buyOrder.orderId}} is on its way.  All of the items have now shipped.</p>
             {{> tracking }}
         </td>
     </tr>

@@ -11,13 +11,13 @@ date: '{{buyOrder.date}}'
             <p>Changes were made to your order \{{buyOrder.Id}}; please see the updated confirmation below.  Your invoice online will also reflect these changes.</p>
             <p>If you do not understand why these changes were made, please <a href="mailto:{{default.supportEmail}}">contact customer service</a>.</p>
             {{> order-buy-summary}}
-            \{{#if buyOrder.payment.hasAmountDue}}
+            \{{#if paymentInstructions.hasAmountDue}}
                 <p><b>There is a balance due on your order; please send payment as soon as possible.</b></p>
                 <p><b class="underlined">Amount Due:</b> \{{buyOrder.invoice.amountDue}}</p>
-                \{{> payment-instructions payment=buyOrder.payment}}
+                {{> payment-instructions}}
                 <p><b>Orders not paid promptly may be cancelled.</b></p>
             \{{/if}}
-            \{{#if buyOrder.payment.isRiskified}}
+            \{{#if paymentInstructions.isRiskified}}
                 <p><b>Please note, every order is subject to a brief security review to help us combat fraud.</b> If there are any issues, we may reach out to you for identity verification.</p>
             \{{/if}}
         </td>

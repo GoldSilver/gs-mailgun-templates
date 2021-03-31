@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Your Order Has Shipped {{buyShippingFull.orderId}}</title>
+    <title>Your Order Has Shipped {{buyOrder.orderId}}</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -66,7 +66,7 @@
     <tr style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
             <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: bold; font-size: 28px;">Your Order Has Shipped</h1>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your order {{buyShippingFull.orderId}} is on its way.  All of the items have now shipped.</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Your order {{buyOrder.orderId}} is on its way.  All of the items have now shipped.</p>
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Please reference the tracking information below for detailed status on when to expect your packages.</p>
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Reminder: most of our shipments are sent with an adult signature required for maximum security. Please plan to be available to receive your package(s) and have ID to show the carrier.</p>
             {{#each shippingPackages as |package|}}
