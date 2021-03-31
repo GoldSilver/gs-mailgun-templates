@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Your Order {{buyShippingReturn.orderId}} Could Not Be Delivered</title>
+    <title>Your Order {{buyOrder.orderId}} Could Not Be Delivered</title>
     <style media="all" type="text/css">
 @media only screen and (max-width: 640px) {
   body {
@@ -67,7 +67,7 @@
         <td class="content-block" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; vertical-align: top; padding: 0 0 20px;" valign="top">
             <h1 style="box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color: #000000; margin: 0; line-height: 1.2em; font-weight: bold; font-size: 28px;">Your Shipment Has Been Returned to Our Facility</h1>
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">After multiple attempts, carriers were unable to deliver the following shipment to the address provided and it has been safely returned to the vault.</p>
-            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Order {{buyShippingReturn.orderId}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{shippingReturn.carrier}}: {{shippingReturn.trackingNumber}}</p>
+            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Order {{buyOrder.orderId}}<br style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box;">{{shippingReturn.carrier}}: {{shippingReturn.trackingNumber}}</p>
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">A member of our team will be reaching out to arrange re-shipment of your parcel. Please don’t hesitate to <a href="support@goldsilver.com" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; color: #3881C2; text-decoration: underline; font-size: 14px;">contact customer service here</a> or reply to this message to help expedite that process.</p>
             <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin-bottom: 10px; font-weight: normal;">Note, if we are unable to get in contact with you in a reasonable period, your order will either be sent to storage or liquidated (market loss fees may apply) at our discretion. So please reply as soon as you can to let us know you still want to take delivery.</p>
         </td>

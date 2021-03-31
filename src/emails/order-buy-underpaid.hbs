@@ -1,14 +1,14 @@
 ---
 layout: default.hbs
-subject: 'Partial Payment for Order {{buyUnderpaid.orderId}}'
+subject: 'Partial Payment for Order {{buyOrder.orderId}}'
 preheader: 'Partial Payment Received; Balance Due'
-date: '{{buyUnderpaid.date}}'
+date: '{{buyOrder.date}}'
 ---
 <table width="100%" cellpadding="0" cellspacing="0">
     <tr>
         <td class="content-block">
             <h1>Partial Payment Received; Balance Due</h1>
-            <p>Thank you for your recent payment on order \{{buyUnderpaid.orderId}}. We want to let you know we received and posted the payment; <span class="underline">however, there remains a balance due on your order</span>.</p>
+            <p>Thank you for your recent payment on order \{{buyOrder.orderId}}. We want to let you know we received and posted the payment; <span class="underline">however, there remains a balance due on your order</span>.</p>
             <ul>
                 <li>Payment Method: \{{buyUnderpaid.payment.method}}</li>
                 <li>Amount Received: \{{buyUnderpaid.payment.amount}}</li>
