@@ -1,0 +1,6 @@
+amount: '$123.22'
+paymentMethod: 'VISA ending in *1111' #a card label or 'Account balance'
+accountId: '1234'
+invoiceId: '9876'
+invoiceHistoryHref: 'https://phoenix-q2.goldsilver.com/my-account/storage-account/1/invoice-history'
+transactionReferenceId: '5678' #id from financial engine?

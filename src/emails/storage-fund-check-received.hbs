@@ -1,0 +1,23 @@
+---
+layout: default.hbs
+subject: 'Your check has been received'
+preheader: 'Available in {{storageCheckReceived.holdInterval}} business days.'
+date: '{{storageNotification.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Check Received; Available in \{{storageCheckReceived.holdInterval}} Business Days</h1>
+            <p>We’ve received a check deposit for your GoldSilver.com account; the funds will be available for use soon:</p>
+            <ul>
+                <li>Check amount: \{{storageCheckReceived.amount}}</li>
+                <li>Account number: \{{storageNotification.accountLabel}}</li>
+                <li><b>Date funds will be available: \{{storageCheckReceived.clearDate}}</b></li>
+            </ul>
+            <p>Note, <span class="underline">all personal checks are subject to a mandatory \{{storageCheckReceived.holdInterval}} business day hold</span>. This is an industry standard to help combat fraud and protect customers from identity theft.</p>
+            <p>Once the funds have cleared, you will see them reflected in your trading balance and the balance will be available to apply at checkout.</p>
+            <p><a href="\{{storageFund.balanceHistoryHref}}">Sign in to your account</a> for additional details, or to use/manage your balance.</p>
+            <p>If you have any questions about your account, or are unsure why you received this message, we’re here to help: Check out our <a href="{{storageFaq}}">frequently asked questions</a>. Or contact us any time by replying to this or any message from us, or via any of our other <a href="{{contactUrl}}">convenient methods</a>.</p>
+        </td>
+    </tr>
+</table>

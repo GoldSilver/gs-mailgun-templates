@@ -182,7 +182,8 @@ a {
     text-decoration: none;
     font-weight: bold; }
   .alert.alert-warning {
-    background: #FCCD67; }
+    background: #FCCD67;
+    color: #000000; }
   .alert.alert-danger {
     background: #d9534f; }
   .alert.alert-success {

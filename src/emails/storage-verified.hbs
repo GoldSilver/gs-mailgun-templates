@@ -1,0 +1,25 @@
+---
+layout: default.hbs
+subject: 'Vault storage account verified: {{storageNotification.accountLabel}}'
+preheader: 'Important information about your new vault storage account.'
+date: '{{storageNotification.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Vault Storage Account Is Ready</h1>
+            <p>Congratulations. Your vault storage account managed by GoldSilver.com has been reviewed, approved and is ready to go. Your account number is \{{storageNotification.accountLabel}}.</p>
+            <p>If you’ve already placed an order for storage, it will be processed shortly and available to trade/transfer once it is confirmed with the vault.</p>
+            <p>With your new storage account, you can <a href="\{{storageNotification.accountHref}}">sign in and manage your precious metals holdings 24x7</a>, including:</p>
+            <ul>
+                <li>Pre-fund your account for faster and easier purchases</li>
+                <li>Check order status</li>
+                <li>Sell or request delivery of your holdings at any time</li>
+                <li>Monitor your portfolio value and balances</li>
+                <li>Review storage invoices and financial history</li>
+            </ul>
+            <p>Thank you for opening a vault storage account with GoldSilver.com.</p>
+            <p>If you have any questions about your account, or are unsure why you received this message, we’re here to help: Check out our <a href="{{storageFaq}}">frequently asked questions</a>. Or contact us any time by replying to this or any message from us, or via any of our other <a href="{{contactUrl}}">convenient methods</a>.</p>
+        </td>
+    </tr>
+</table>

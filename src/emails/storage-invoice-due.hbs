@@ -1,0 +1,42 @@
+---
+layout: default.hbs
+subject: 'Vault Storage Balance Due for Account {{storageNotification.accountLabel}}'
+preheader: 'Please make a payment online'
+date: '{{storageNotification.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Vault Storage Balance Due</h1>
+            \{{#if storagePaymentInstructions.isFinalNotice}}
+                <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="alert alert-warning">
+                            \{{#if storagePaymentInstructions.holdingsCoverAmountDue}}
+                                <p>If your balance is not settled within 3 business days of this notice, we may automatically liquidate the minimum amount of metals required to satisfy your balance due.</p>
+                            \{{else}}
+                                <p>You have insufficient holdings in your account to cover the overdue cost by liquidation. If your balance is not settled within 3 business days of this notice, any remaining metals in your account will be liquidated and the proceeds applied to your overdue balance and fees. Any remaining debt will be sent for collections.</p>
+                            \{{/if}}
+                            <p>Please make payment promptly or contact us to resolve any issues.</p>
+                        </td>
+                    </tr>
+                </table>
+            \{{else}}
+                <p>Thank you for trusting GoldSilver.com with your vault storage assets.</p>
+            \{{/if}}
+            <p><b>There is a balance due on your account for recent storage fees. Please make a payment promptly.</b></p>
+            <p class="underline">Amount Due: \{{storagePaymentInstructions.amountDue}}</p>
+            \{{#if storagePaymentInstructions.autoPayFailed}}
+                <p>We have been unable to charge your current auto-payment method on file: \{{storagePaymentInstructions.failedAutoPayCardLabel}}.</p>
+                <p>Please <a href="\{{storagePaymentInstructions.storageInvoiceHistoryHref}}">check your payment settings</a> to ensure your card information is up-to-date and make a payment today.</p>
+                <p class="aligncenter"><a href="\{{storagePaymentInstructions.storageInvoiceHistoryHref}}" class="btn btn-primary">View Payment Settings</a></p>
+            \{{else}}
+                <p>There is an insufficient cash balance in your account to cover your current balance due.</p>
+                <p>The most popular way to pay storage balances is to set up automatic payments on a credit or debit card. You can also make one-time payments with a card.  <a href="\{{storagePaymentInstructions.storageInvoiceHistoryHref}}">Set up a one-time or recurring card payment</a>.</p>
+                <p class="aligncenter"><a href="\{{storagePaymentInstructions.storageInvoiceHistoryHref}}" class="btn btn-primary">Make Payment Now</a></p>
+            \{{/if}}
+            <p>You may also pay by depositing an account balance to cover these and future storage fees. Your balance can be applied to fees, used for future investments, or withdrawn whenever you choose. <a href="\{{storagePaymentInstructions.storageFundHref}}">Make a deposit to your account</a>.</p>
+            <p>As a reminder, storage invoices are due upon receipt. Please remit payment promptly. Thank you.</p>
+        </td>
+    </tr>
+</table>

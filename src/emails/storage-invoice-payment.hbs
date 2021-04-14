@@ -1,0 +1,25 @@
+---
+layout: default.hbs
+subject: 'Vault Storage Payment Confirmation/Receipt Account {{storageNotification.accountLabel}}; Thank You'
+preheader: 'Your storage'
+date: '{{storageNotification.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Secure Vault Storage Payment Receipt</h1>
+            <p>You’ve made a wise choice protecting your precious metals investments with a top tier, third-party vault provider through GoldSilver.com.</p>
+            <p>As a reminder, all of our storage locations are under 24/7 surveillance with armed guards, class 3 vaults, and carry full replacement value insurance at all times – all for a fraction of the cost of home insurance, and highly competitive with most “paper gold” products.</p>
+            <p>A payment was successfully applied to your balance due for storage services – which includes the cost of vaulting, insurance, auditing and all other services.</p>
+            <p>Please save a copy of this receipt or your paid invoices, as for most taxpayers in the U.S. at least this is a deductible cost for investment management or can positively impact cost basis for tax purposes. Always consult with a local tax advisor, of course. Payment confirmation:</p>
+            <ul>
+                <li>Amount: \{{storagePaid.amount}}</li>
+                <li>Payment method: \{{storagePaid.paymentMethod}}</li>
+                <li>Account: \{{storageNotification.accountLabel}}</li>
+                <li>Invoice: #\{{storagePaid.invoiceId}}</li>
+            </ul>
+            <p>You can also access all open and paid invoices, change your default payment method, and more in <a href="\{{storagePaid.invoiceHistoryHref}}">your account online</a>. Visit GoldSilver.com, sign in, go to “My Account”, select “My Storage Account” then “Invoice History”.</p>
+            <p>Transaction reference number: #\{{storagePaid.transactionReferenceId}}.</p>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,30 @@
+---
+layout: default.hbs
+subject: 'Automatic Payment Settings Have Been Changed'
+preheader: 'Confirmation of your change'
+date: '{{storageNotification.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Automatic Payment Settings Have Been Changed</h1>
+            <p>We are sending this email to confirm that your automatic payment settings for vault storage with GoldSilver.com have been adjusted.</p>
+            <ul>
+                <li>
+                    Status:
+                    \{{#if storageAutoPay.isEnabled}}
+                        Auto-pay with card
+                    \{{else}}
+                        Charge my balance / send me a bill
+                    \{{/if}}
+                </li>
+                \{{#if storageAutoPay.isEnabled}}
+                    <li>Payment method: \{{storageAutoPay.cardLabel}}</li>
+                \{{/if}}
+            </ul>
+            <p>You will receive an invoice every storage billing period, and your card or account balance will be automatically debited to cover the fees.</p>
+            <p>If your automatic payment method fails for any reason, or you have insufficient balance, we will let you know so that you can settle manually at that time.</p>
+            <p>If you have any questions about your account, or are unsure why you received this message, we’re here to help: Check out our <a href="{{storageFaq}}">frequently asked questions</a>. Or contact us any time by replying to this or any message from us, or via any of our other <a href="{{contactUrl}}">convenient methods</a>.</p>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,23 @@
+---
+layout: default.hbs
+subject: 'Deposit Received and Available for Trading (Ref: {{storageFund.transactionReferenceId}}'
+preheader: '{{storageFund.amount}} via {{storageFund.methodLabel}} credited'
+date: '{{storageNotification.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Deposit Received; Available for Use</h1>
+            <p>We’ve received a deposit and credited the funds to your account:</p>
+            <ul>
+                <li>Amount credited: \{{storageFund.amount}}</li>
+                <li>Deposit method: \{{storageFund.methodLabel}}</li>
+                <li>Account number: \{{storageNotification.accountLabel}}</li>
+            </ul>
+            <p>These funds are available for immediate trading.</p>
+            <p><a href="\{{storageFund.balanceHistoryHref}}">Sign in to your account</a> for additional details, or to use/manage your balance.</p>
+            <p>If you have any questions about your account, we’re here to help: Check out our <a href="{{storageFaq}}">frequently asked questions</a>. Or contact us any time by replying to this or any message from us, or via any of our other <a href="{{contactUrl}}">convenient methods</a>.</p>
+            <p>Transaction reference number: #\{{storageFund.transactionReferenceId}}</p>
+        </td>
+    </tr>
+</table>
