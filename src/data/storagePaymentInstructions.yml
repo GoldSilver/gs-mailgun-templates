@@ -1,0 +1,7 @@
+isFinalNotice: true
+holdingsCoverAmountDue: false
+amountDue: '$123.22'
+autoPayFailed: false
+failedAutoPayCardLabel: 'VISA ending in *1234'
+storageInvoiceHistoryHref: 'https://phoenix-q2.goldsilver.com/my-account/storage-account/1/invoice-history/'
+storageFundHref: 'https://phoenix-q2.goldsilver.com/my-account/storage-account/1/fund'

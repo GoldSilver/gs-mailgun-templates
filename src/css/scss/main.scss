@@ -231,6 +231,7 @@ a {
 
   &.alert-warning {
     background: $brand-warning;
+    color: $text-color;
   }
 
   &.alert-danger {

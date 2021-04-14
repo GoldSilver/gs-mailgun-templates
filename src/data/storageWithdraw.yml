@@ -1,0 +1,6 @@
+transactionReferenceId: '1234' #financial engine id?
+amount: '$9,999.99'
+methodLabel: 'Check' #'Check' or 'Wire'
+destinationLabel: '123 Example St., Town, VT 05647' # address if check, bank label if wire
+requestDateTime: 'February 3, 2021 3:56pm UTC'
+

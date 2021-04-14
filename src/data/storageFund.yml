@@ -1,0 +1,4 @@
+transactionReferenceId: '1234'
+amount: '$9,999.99'
+methodLabel: 'Check' #'check' or 'Wire'
+balanceHistoryHref: 'https://phoenix-q2.goldsilver.com/my-account/storage-account/1/balance-history/'
