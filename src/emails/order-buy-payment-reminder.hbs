@@ -19,7 +19,7 @@ date: '{{buyOrder.date}}'
                 <p><b>Balance Due: <span class="text-danger">\{{buyPaymentReminder.amountDue}}</span></b></p>
                 <p>Please send payment promptly. Reminder: price locked orders that are cancelled or not paid promptly may result in market-loss charges.</p>
             \{{/if}}
-            <p>You chose to pay your order by \{{buyPaymentReminder.payment.method.name}}. Follow these instructions to settle your balance due.</p>
+            <p>You chose to pay your order by \{{buyPaymentReminder.payment.method}}. Follow these instructions to settle your balance due.</p>
             {{> payment-instructions}}
         </td>
     </tr>

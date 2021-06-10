@@ -4,14 +4,7 @@ isFinalNotice: true
 amountDue: '$13,238.88'
 payment:
   isRiskified: false # true if method equals 'card' or 'paypal'
-  method:
-    name: 'Wire' # 'Check', 'Wire', 'PayPal', 'BitPay', 'Account Balance', 'Card'
-    isCheck: false
-    isWire: true
-    isPayPal: false
-    isCrypto: false
-    isAccount: false
-    isCard: false
+  method: 'Wire' # 'Check', 'Wire', 'PayPal', 'BitPay', 'Account Balance', 'Card'
   hasAmountDue: true # true if invoice.amountDue > 0 and not already processing a payment
   checkInstructions: #properties can be blank if isCheck false
     requiresIdentityVerification: true
