@@ -2,4 +2,4 @@ holdInterval: '5' # number of business days checks are held
 clearDate: 'February 21, 2021'
 amount: '$9,999.00'
 balanceHistoryHref: 'https://phoenix-q2.goldsilver.com/my-account/storage-account/1/balance-history'
-
+requiresIdentityVerification: true
