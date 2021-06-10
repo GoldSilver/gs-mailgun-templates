@@ -1,0 +1,15 @@
+---
+layout: default.hbs
+subject: 'Quote For Storage Delivery Order {{transferOrder.orderId}}'
+preheader: 'Quote valid until {{transferQuote.validUntil}}.  Once confirmed, the total will be charged.'
+date: '{{transferOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Your Delivery Order is Awaiting Payment Confirmation</h1>
+            <p>The quoted total for your InstaVault fractional conversion and delivery order request is <b>\{{transferQuote.quoteTotal}}</b>. This quote is valid until <b>\{{transferQuote.validUntil}}</b>. If you'd like to continue with delivery, please confirm you agree to pay this total below.  Once confirmed, the total will be charged to \{{transferQuote.cardLabel}}.</p>
+            <p class="aligncenter"><a href="\{{transferQuote.quoteConfirmUrl}}" class="btn btn-primary">Confirm Payment & Take Delivery</a></p>
+        </td>
+    </tr>
+</table>
