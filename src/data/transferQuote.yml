@@ -1,0 +1,4 @@
+validUntil: '06/27/21'
+quoteTotal: '$1,200.88'
+cardLabel: 'MASTERCARD ending in *1111 (John Smith)'
+quoteConfirmUrl: 'https://demo.phoenix.tempgs.com/my-account/order-history/1234?auth=yes&quoteConfirmed=fds9a87fa587fs98799877df9a7'

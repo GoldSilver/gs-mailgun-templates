@@ -1,0 +1,15 @@
+---
+layout: default.hbs
+subject: 'Quote For Storage Delivery Order {{transferOrder.orderId}}'
+preheader: 'Quote valid until {{transferQuote.validUntil}}.  Once confirmed, the total will be charged.'
+date: '{{transferOrder.date}}'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>Awaiting Payment</h1>
+            <p>The quoted total for this order is \{{transferQuote.amount}}. This quote is valid until \{{transferQuote.validUntil}}. Once confirmed, the total will be charged to \{{transferQuote.cardLabel}}</p>
+            <p class="aligncenter"><a href="\{{transferQuote.quoteConfirmUrl}}" class="btn btn-primary">Confirm &amp; Pay</a></p>
+        </td>
+    </tr>
+</table>
