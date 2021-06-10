@@ -1,0 +1,14 @@
+---
+layout: default.hbs
+subject: "You've been invited to be a GoldSilver admin"
+preheader: 'Please set a password to sign into the CMS'
+---
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h1>You've been invited to be a GoldSilver admin</h1>
+            <p>Please create your account using the link below:</p>
+            <p class="aligncenter"><a href="\{{ adminInvitation.tokenizedUrl }}" class="btn btn-primary">Accept Invitation</a><br><small><a href="\{{adminInvitation.tokenizedUrl}}">\{{adminInvitation.tokenizedUrl}}</a></small></p>
+        </td>
+    </tr>
+</table>

@@ -8,6 +8,9 @@ date: '{{storageNotification.date}}'
     <tr>
         <td class="content-block">
             <h1>Check Received; Available in \{{storageCheckReceived.holdInterval}} Business Days</h1>
+            \{{#if storageCheckReceived.requiresIdentityVerification}}
+                <p><b>If you have not already submitted a color photograph of your current government-issued ID, <span class="underline">please reply to this message with that information now</span> or your funds may be delayed.</b></p>
+            \{{/if}}
             <p>We’ve received a check deposit for your GoldSilver.com account; the funds will be available for use soon:</p>
             <ul>
                 <li>Check amount: \{{storageCheckReceived.amount}}</li>
