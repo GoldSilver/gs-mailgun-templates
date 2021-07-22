@@ -1,0 +1,6 @@
+isPersonal: false
+isBalance: true
+isBankWire: false
+isCheck: false
+isCard: false
+isCrypto: false
